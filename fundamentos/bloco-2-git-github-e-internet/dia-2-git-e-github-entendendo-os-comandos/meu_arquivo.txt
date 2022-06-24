@@ -8,3 +8,5 @@ O que eu vou aprender na Trybe:
 - HTML
 - CSS
 - Jest
+- JavaScript
+- React
