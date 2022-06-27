@@ -2,6 +2,10 @@ div:hover {
     border: 1px solid black;
 }
 
+h3 {
+    font-size: 20px;
+}
+
 .primary {
     color: blue;
 }
