@@ -8,6 +8,7 @@ h3 {
 
 .primary {
     color: blue;
+    font-style: italic;
 }
 .secondary {
     color: green;
@@ -15,6 +16,8 @@ h3 {
 
 .additional {
     color: orange;
+    font-size: 30px;
+    font-style: italic;
 }
 
 .dark {
@@ -23,4 +26,5 @@ h3 {
 
 .clear {
     color: aqua;
+    font-style: italic;
 }
