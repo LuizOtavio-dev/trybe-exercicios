@@ -11,5 +11,6 @@ li:active {
 }
 
 ol, ul {
-    list-style: none
+    list-style: none;
+    text-align: center;
 }
