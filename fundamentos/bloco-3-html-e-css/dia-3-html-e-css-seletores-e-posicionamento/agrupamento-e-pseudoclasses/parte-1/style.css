@@ -1,0 +1,11 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: gold;
+}
+
+li:active {
+    font-weight: 900;
+}
