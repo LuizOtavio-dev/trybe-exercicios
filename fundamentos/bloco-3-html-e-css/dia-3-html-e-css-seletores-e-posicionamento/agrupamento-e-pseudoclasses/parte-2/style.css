@@ -1,0 +1,30 @@
+div:hover {
+    border: 1px solid black;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.primary {
+    color: blue;
+    font-style: italic;
+}
+.secondary {
+    color: green;
+}
+
+.additional {
+    color: orange;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.dark {
+    color: darkred;
+}
+
+.clear {
+    color: aqua;
+    font-style: italic;
+}

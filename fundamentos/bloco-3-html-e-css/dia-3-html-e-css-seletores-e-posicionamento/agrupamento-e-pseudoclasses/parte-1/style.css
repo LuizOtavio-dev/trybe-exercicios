@@ -1,0 +1,16 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: gold;
+}
+
+li:active {
+    font-weight: 900;
+}
+
+ol, ul {
+    list-style: none;
+    text-align: center;
+}
