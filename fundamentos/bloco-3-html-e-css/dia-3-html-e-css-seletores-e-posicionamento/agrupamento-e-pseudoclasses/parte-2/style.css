@@ -1,3 +1,22 @@
 div:hover {
     border: 1px solid black;
 }
+
+.primary {
+    color: blue;
+}
+.secondary {
+    color: green;
+}
+
+.additional {
+    color: orange;
+}
+
+.dark {
+    color: darkred;
+}
+
+.clear {
+    color: aqua;
+}
