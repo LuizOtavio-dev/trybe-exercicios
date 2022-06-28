@@ -6,6 +6,26 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: #748B75;
+    color: #F5FBEF;
+}
+
+header {
+    background-color: #503D42;
+    padding: 20px;
+}
+
+nav {
+    background-color: #F5FBEF;
+    padding: 10px;
+}
+
+nav a {
+    color: #748B75;
+    padding: 20px;
+}
+
 img {
     width: 700px;
 }
