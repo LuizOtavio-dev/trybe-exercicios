@@ -1,4 +1,4 @@
-# Dia 3
+# Dia 4
 
 O objetivo dos exercícios desse dia foi colocar em prática o que aprendi sobre HTML Semântico;
 
