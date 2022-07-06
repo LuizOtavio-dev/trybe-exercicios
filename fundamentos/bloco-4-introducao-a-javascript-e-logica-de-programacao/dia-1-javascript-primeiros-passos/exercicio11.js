@@ -1,8 +1,7 @@
-const grossSalary = 1500.10;
+const grossSalary = 3000.00;
 
 let inss;
 let ir;
-let totalTax;
 let liquidSalary;
 
 if (grossSalary <= 1556.94) {
@@ -15,17 +14,18 @@ if (grossSalary <= 1556.94) {
   inss = 570.88
 }
 
-if (grossSalary <= 1903.98) {
+liquidSalary = grossSalary - inss;
+
+if (liquidSalary <= 1903.98) {
   ir = 0;
-} else if (grossSalary >= 1903.99 && grossSalary <= 2826.65) {
-  ir = (grossSalary * 7.5) / 100 + 142.80;
-} else if (grossSalary >= 2826.66 && grossSalary <= 3751.05) {
-  ir = (grossSalary * 15) / 100 + 354.80;
-} else if (grossSalary >= 3751.06 && grossSalary <= 4664.68) {
-  ir = (grossSalary * 22.5) / 100 + 636.13;
+} else if (liquidSalary >= 1903.99 && liquidSalary <= 2826.65) {
+  ir = (liquidSalary * 7.5) / 100 - 142.80;
+} else if (liquidSalary >= 2826.66 && liquidSalary <= 3751.05) {
+  ir = (liquidSalary * 15) / 100 - 354.80;
+} else if (liquidSalary >= 3751.06 && liquidSalary <= 4664.68) {
+  ir = (liquidSalary * 22.5) / 100 - 636.13;
 } else {
-  ir = (grossSalary * 27.5) / 100 + 869.36;
+  ir = (liquidSalary * 27.5) / 100 - 869.36;
 }
 
-totalTax = inss + ir
-liquidSalary = grossSalary - totalTax;
+liquidSalary -= ir;
