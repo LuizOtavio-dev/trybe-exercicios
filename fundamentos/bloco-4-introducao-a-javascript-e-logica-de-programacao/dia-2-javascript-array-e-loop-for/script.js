@@ -79,3 +79,9 @@ for (let index = 1; index <= 25; index += 1) {
 }
 
 console.log(arrayNumbers);
+
+// exercicio 9
+
+for (const number of arrayNumbers) {
+  console.log(number / 2);
+};
