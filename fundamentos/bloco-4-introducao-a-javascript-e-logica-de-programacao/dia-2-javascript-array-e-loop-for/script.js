@@ -33,6 +33,7 @@ if (media > 20) {
 // exercicio 5
 
 let higherNumber = 0;
+
 for (let index = 0; index < numbers.length; index += 1) {
   if (numbers[index] > higherNumber) {
     higherNumber = numbers[index]
@@ -40,3 +41,19 @@ for (let index = 0; index < numbers.length; index += 1) {
 }
 
 console.log(higherNumber);
+
+// exercicio 6
+
+let oddNumbers = 0;
+
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] % 2 !== 0) {
+    oddNumbers += 1;
+  }
+};
+
+if (oddNumbers > 0) {
+  console.log(oddNumbers);
+} else {
+  console.log("nenhum valor ímpar encontrado");
+};
