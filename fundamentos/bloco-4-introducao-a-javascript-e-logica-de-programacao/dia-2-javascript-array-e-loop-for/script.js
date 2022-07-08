@@ -57,3 +57,15 @@ if (oddNumbers > 0) {
 } else {
   console.log("nenhum valor ímpar encontrado");
 };
+
+// exercicio 7
+
+let smallestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number < smallestNumber) {
+    smallestNumber = number;
+  }
+}
+
+console.log(smallestNumber);
