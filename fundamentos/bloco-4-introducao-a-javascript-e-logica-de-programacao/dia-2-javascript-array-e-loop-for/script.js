@@ -130,3 +130,22 @@ for (let index = 1; index < numbers.length; index += 1) {
 };
 
 console.log(numbers);
+
+// exercício 3
+
+let originalNumbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let multipliedNumbers = [];
+let counter = 1;
+
+for (let index = 0; index < originalNumbers.length; index += 1) {
+  if (counter < originalNumbers.length) {
+    let multiplication = originalNumbers[index] * originalNumbers[counter]
+    multipliedNumbers.push(multiplication);
+    counter += 1;
+  } else {
+    let multiplication = originalNumbers[index] * 2
+    multipliedNumbers.push(multiplication);
+  }
+};
+
+console.log(multipliedNumbers);
