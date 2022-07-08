@@ -43,3 +43,25 @@ for (let index = 1; index < array.length; index += 1) {
 
 console.log(biggestWord);
 console.log(smallestWord);
+
+// exercicio 4
+
+const number = 50;
+let primeNumbers = [];
+let biggestPrimeNumber = 0;
+
+for (let index = 2; index <= number; index += 1) {
+  let prime = true;
+  for (let counter = 2; counter < index; counter += 1) {
+    if (index % counter === 0) {
+      prime = false;
+    }
+  }
+  if (prime === true) {
+    primeNumbers.push(index);
+  }
+}
+
+biggestPrimeNumber = primeNumbers[primeNumbers.length - 1];
+
+console.log(biggestPrimeNumber);
