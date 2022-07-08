@@ -30,7 +30,7 @@ if (media > 20) {
   console.log("valor menor ou igual a 20");
 }
 
-// exercicio 5
+// exercício 5
 
 let higherNumber = 0;
 
@@ -42,7 +42,7 @@ for (let index = 0; index < numbers.length; index += 1) {
 
 console.log(higherNumber);
 
-// exercicio 6
+// exercício 6
 
 let oddNumbers = 0;
 
@@ -58,7 +58,7 @@ if (oddNumbers > 0) {
   console.log("nenhum valor ímpar encontrado");
 };
 
-// exercicio 7
+// exercício 7
 
 let smallestNumber = numbers[0];
 
@@ -70,7 +70,7 @@ for (const number of numbers) {
 
 console.log(smallestNumber);
 
-// exercicio 8
+// exercício 8
 
 let arrayNumbers = [];
 
@@ -80,8 +80,31 @@ for (let index = 1; index <= 25; index += 1) {
 
 console.log(arrayNumbers);
 
-// exercicio 9
+// exercício 9
 
 for (const number of arrayNumbers) {
   console.log(number / 2);
 };
+
+// bônus
+// exercício 1
+
+// primeira forma
+
+let orderedNumbers = numbers.sort(function(a, b){return a - b});
+
+console.log(orderedNumbers);
+
+// segunda forma
+
+for (let index = 1; index < numbers.length; index += 1) {
+  for (let counter = 0; counter < index; counter += 1) {
+    if (numbers[index] < numbers[counter]) {
+      let position = numbers[index];
+      numbers[index] = numbers[counter];
+      numbers[counter] = position;
+    }
+  }
+};
+
+console.log(numbers);

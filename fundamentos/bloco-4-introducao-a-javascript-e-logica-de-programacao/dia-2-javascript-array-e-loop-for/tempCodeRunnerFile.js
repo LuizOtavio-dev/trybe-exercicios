@@ -1,7 +1,11 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let total = 0;
-for (let index = 0; index < numbers.length; index += 1) {
-  total += numbers[index];
-};
+for (let index = 1; index < numbers.length; index += 1) {
+//   for (let counter = 0; counter < index; counter += 1) {
+//     if (numbers[index] < numbers[counter]) {
+//       let position = numbers[index];
+//       numbers[index] = numbers[counter];
+//       numbers[counter] = position;
+//     }
+//   }
+// }
 
-console.log(total);
+// console.log(numbers);
