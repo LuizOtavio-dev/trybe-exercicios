@@ -29,3 +29,14 @@ if (media > 20) {
 } else {
   console.log("valor menor ou igual a 20");
 }
+
+// exercicio 5
+
+let higherNumber = 0;
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] > higherNumber) {
+    higherNumber = numbers[index]
+  }  
+}
+
+console.log(higherNumber);
