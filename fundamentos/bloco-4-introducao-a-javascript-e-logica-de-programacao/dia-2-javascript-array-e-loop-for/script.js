@@ -69,3 +69,13 @@ for (const number of numbers) {
 }
 
 console.log(smallestNumber);
+
+// exercicio 8
+
+let arrayNumbers = [];
+
+for (let index = 1; index <= 25; index += 1) {
+  arrayNumbers.push(index);
+}
+
+console.log(arrayNumbers);
