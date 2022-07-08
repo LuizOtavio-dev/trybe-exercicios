@@ -21,3 +21,11 @@ console.log(total);
 let media = total / numbers.length;
 
 console.log(media);
+
+// exercício 4
+
+if (media > 20) {
+  console.log("valor maior que 20");
+} else {
+  console.log("valor menor ou igual a 20");
+}
