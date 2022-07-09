@@ -44,7 +44,7 @@ for (let index = 1; index < array.length; index += 1) {
 console.log(biggestWord);
 console.log(smallestWord);
 
-// exercicio 4
+// exercício 4
 
 const number = 50;
 let primeNumbers = [];
@@ -55,13 +55,23 @@ for (let index = 2; index <= number; index += 1) {
   for (let counter = 2; counter < index; counter += 1) {
     if (index % counter === 0) {
       prime = false;
-    }
-  }
+    };
+  };
   if (prime === true) {
     primeNumbers.push(index);
-  }
-}
+  };
+};
 
 biggestPrimeNumber = primeNumbers[primeNumbers.length - 1];
 
 console.log(biggestPrimeNumber);
+
+// bônus
+// exercício 1
+
+const n = 5;
+const asterisk = '*';
+
+for (let index = 0; index <= n; index += 1) {
+  console.log(asterisk.padStart(n, asterisk));
+};
