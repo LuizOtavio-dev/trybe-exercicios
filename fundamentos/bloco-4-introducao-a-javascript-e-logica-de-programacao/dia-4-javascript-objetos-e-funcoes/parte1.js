@@ -1,3 +1,5 @@
+// exercícios 1, 2, 3, 4 e 5
+
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -29,6 +31,8 @@ for (const key in info) {
     console.log(info[key] + ' e ' + infoTioPatinhas[key]);
   } else {console.log('Ambos recorrentes')}
 }
+
+// exercícios 6, 7 e 8
 
 let leitor = {
   nome: 'Julia',
