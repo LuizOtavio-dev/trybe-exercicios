@@ -8,3 +8,7 @@ console.log('Bem-vinda, ' + info.personagem);
 
 info.recorrente = 'Sim';
 console.log(info);
+
+for (const key in info) {
+  console.log(key);
+}
