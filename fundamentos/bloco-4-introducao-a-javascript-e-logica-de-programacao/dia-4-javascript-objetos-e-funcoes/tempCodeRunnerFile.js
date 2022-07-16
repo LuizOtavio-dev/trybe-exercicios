@@ -1,10 +1,15 @@
-let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+
+let leitor = {
+  nome: 'Julia',
+  sobrenome: 'Pessoa',
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+  ],
 };
 
-console.log('Bem-vinda, ' + info.personagem);
-
-info.recorrente = 'Sim';
-console.log(info);
+console.log("O livro favorito de " + leitor.nome + " " + leitor.sobrenome + " se chama "  + "'" + leitor.livrosFavoritos[0].titulo + "'");
