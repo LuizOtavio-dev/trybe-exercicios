@@ -12,3 +12,7 @@ console.log(info);
 for (const key in info) {
   console.log(key);
 }
+
+for (const key in info) {
+  console.log(info[key]);
+}
