@@ -1,23 +1,15 @@
+ function higherNumber(array) {
+  let indexNumber = 0;
+  let compareNumbers = array[0]
 
-let leitor = {
-  nome: 'Julia',
-  sobrenome: 'Pessoa',
-  idade: 21,
-  livrosFavoritos: [
-    {
-      titulo: 'O Pior Dia de Todos',
-      autor: 'Daniela Kopsch',
-      editora: 'Tordesilhas',
-    },
-  ],
-};
+  for (const iterator of array) {
+    if (iterator > compareNumbers) {
+      indexNumber = array.indexOf(iterator);
+      compareNumbers = iterator
+    }
+  }
 
-console.log("O livro favorito de " + leitor.nome + " " + leitor.sobrenome + " se chama "  + "'" + leitor.livrosFavoritos[0].titulo + "'");
+  return indexNumber;
+ }
 
-leitor.livrosFavoritos.push({
-  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-  autor: 'JK Rowling',
-  editora: 'Rocco',
-});
-
-console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos');
+console.log(higherNumber([2, 3, 6, 7, 10, 1]));
