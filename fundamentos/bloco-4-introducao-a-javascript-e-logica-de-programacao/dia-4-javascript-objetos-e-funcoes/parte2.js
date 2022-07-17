@@ -92,3 +92,17 @@ function numberThatRepeatsTheMost(array) {
 }
 
 console.log(numberThatRepeatsTheMost([2, 3, 2, 5, 8, 2, 3]));
+
+// 6
+
+function summation(number) {
+  let result = 1;
+  
+  for (let index = 2; index <= number; index += 1) {
+    result += index
+  }
+
+  return result;
+}
+
+console.log(summation(5));
