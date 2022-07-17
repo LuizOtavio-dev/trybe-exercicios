@@ -49,3 +49,19 @@ function smallestNumber(array) {
  }
 
 console.log(smallestNumber([2, 4, 6, 7, 10, 0, -3]));
+
+// 4
+
+function biggestName(array) {
+  let compareNames = array[0]
+
+  for (const iterator of array) {
+    if (iterator.length > compareNames.length) {
+      compareNames = iterator
+    }
+  }
+
+  return compareNames;  
+}
+
+console.log(biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
