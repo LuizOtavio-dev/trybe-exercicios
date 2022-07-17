@@ -1,10 +1,11 @@
-function summation(number) {
-  let result = 1;
-  for (let index = 2; index <= number; index += 1) {
-    result += index
+function endOfWord(word, ending) {
+  let isTrue = false;
+
+  if (word.length > ending.length && word.slice(word.length - ending.length) === ending) {
+    isTrue = true;
   }
 
-  return result;
+  return isTrue;
 }
 
-console.log(summation(5));
+console.log(endOfWord('trybe', 'be'));

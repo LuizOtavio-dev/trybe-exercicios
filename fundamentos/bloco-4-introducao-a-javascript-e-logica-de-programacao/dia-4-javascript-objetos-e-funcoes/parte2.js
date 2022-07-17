@@ -97,7 +97,7 @@ console.log(numberThatRepeatsTheMost([2, 3, 2, 5, 8, 2, 3]));
 
 function summation(number) {
   let result = 1;
-  
+
   for (let index = 2; index <= number; index += 1) {
     result += index
   }
@@ -106,3 +106,17 @@ function summation(number) {
 }
 
 console.log(summation(5));
+
+// 7
+
+function endOfWord(word, ending) {
+  let isTrue = false;
+
+  if (word.length > ending.length && word.slice(word.length - ending.length) === ending) {
+    isTrue = true;
+  }
+
+  return isTrue;
+}
+
+console.log(endOfWord('trybe', 'be'));
