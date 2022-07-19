@@ -29,3 +29,22 @@ function whatRomanNumber(number) {
 }
 
 console.log(whatRomanNumber('vi'));
+
+// 2
+
+let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+
+function arrayOfNumbers(array) {
+  let evenNumbers = [];
+  for (let index = 0; index < array.length; index++) {
+    for (let counter = 0; counter < array[index].length; counter += 1) {
+      if (array[index][counter] % 2 === 0) {
+        evenNumbers.push(array[index][counter]);
+      }
+    }
+  }
+
+  return evenNumbers;
+}
+
+console.log(arrayOfNumbers(vector));
