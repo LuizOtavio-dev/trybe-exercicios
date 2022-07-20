@@ -142,3 +142,21 @@ function lastResident(object) {
 }
 
 lastResident(moradores);
+
+// 5
+
+function fullName(object) {
+  for (let index = 0; index < object.blocoUm.length; index += 1) {
+    const name = object.blocoUm[index].nome;
+    const lastName = object.blocoUm[index].sobrenome;
+    console.log('morador ' + (index + 1) + ' Bloco 1: ' + name + ' ' + lastName);
+  }
+
+  for (let index = 0; index < object.blocoDois.length; index += 1) {
+    const name = object.blocoDois[index].nome;
+    const lastName = object.blocoDois[index].sobrenome;
+    console.log('morador ' + (index + 1) + ' Bloco 2: ' + name + ' ' + lastName);
+  }
+}
+
+fullName(moradores);
