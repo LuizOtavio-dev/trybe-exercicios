@@ -9,6 +9,9 @@ p[1].innerText = 'Daqui 2 anos me vejo trabalhando como Desenvolvedor';
 
 //  Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 
+const main = document.getElementsByClassName('main-content');
+main[0].style.backgroundColor = 'rgb(76,164,109)';
+
 //  Crie e execute uma função que mude a cor do quadrado vermelho para branco.
 
 //  Crie e execute uma função que corrija o texto da tag <h1>.
