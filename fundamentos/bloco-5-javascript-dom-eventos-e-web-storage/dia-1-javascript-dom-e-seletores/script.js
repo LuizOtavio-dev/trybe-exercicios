@@ -14,6 +14,9 @@ main[0].style.backgroundColor = 'rgb(76,164,109)';
 
 //  Crie e execute uma função que mude a cor do quadrado vermelho para branco.
 
+const section = document.getElementsByClassName('center-content');
+section[0].style.backgroundColor = 'white';
+
 //  Crie e execute uma função que corrija o texto da tag <h1>.
 
 //  Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
