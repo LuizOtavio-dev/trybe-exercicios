@@ -43,3 +43,11 @@ function paragraphUpperCase() {
 paragraphUpperCase();
 
 //  Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+
+function allParagraphs() {
+  const p = document.getElementsByTagName('p');
+  for (let index = 0; index < p.length; index += 1) {
+    console.log(p[index].innerText);
+  }
+}
+allParagraphs();
