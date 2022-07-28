@@ -8,6 +8,7 @@ const sectionSecondChildMain = document.createElement('section');
 const sectionThirdChildMain = document.createElement('section');
 const pChildSection = document.createElement('p');
 const imgChildSectionSecondChildMain = document.createElement('img');
+const ulChildSectionThirdChildMain = document.createElement('ul');
 
 h1ChildBody.innerText = 'Exercício 5.2 - JavaScript DOM';
 body.appendChild(h1ChildBody)
@@ -35,4 +36,14 @@ imgChildSectionSecondChildMain.alt = 'image';
 imgChildSectionSecondChildMain.className = 'small-image';
 sectionSecond.appendChild(imgChildSectionSecondChildMain);
 
+const sectionThird = document.getElementsByClassName('right-content')[0];
+sectionThird.appendChild(ulChildSectionThirdChildMain);
 
+let numbersFull = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+for (const iterator of numbersFull) {
+  const ul = sectionThird.firstElementChild;
+  const liChildUlChildSectionThird = document.createElement('li');
+  liChildUlChildSectionThird.innerText = iterator;
+  ul.appendChild(liChildUlChildSectionThird);
+}
