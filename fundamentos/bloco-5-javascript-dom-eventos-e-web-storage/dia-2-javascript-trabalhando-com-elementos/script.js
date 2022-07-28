@@ -60,3 +60,6 @@ main.removeChild(sectionLeft);
 
 const sectionRight = document.getElementsByClassName('right-content')[0];
 sectionRight.style.marginRight = 'auto';
+
+const sectionCenter = document.getElementsByClassName('center-content')[0].parentElement;
+sectionCenter.style.backgroundColor = 'green';
