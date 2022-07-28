@@ -5,6 +5,7 @@ const h1ChildBody = document.createElement('h1');
 const mainChildBody = document.createElement('main');
 const sectionChildMain = document.createElement('section');
 const sectionSecondChildMain = document.createElement('section');
+const sectionThirdChildMain = document.createElement('section');
 const pChildSection = document.createElement('p');
 
 h1ChildBody.innerText = 'Exercício 5.2 - JavaScript DOM';
@@ -23,3 +24,6 @@ section.appendChild(pChildSection);
 
 sectionSecondChildMain.className = 'left-content';
 main.appendChild(sectionSecondChildMain);
+
+sectionThirdChildMain.className = 'right-content';
+main.appendChild(sectionThirdChildMain);
