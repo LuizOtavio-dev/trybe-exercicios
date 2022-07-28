@@ -11,7 +11,8 @@ const imgChildSectionSecondChildMain = document.createElement('img');
 const ulChildSectionThirdChildMain = document.createElement('ul');
 
 h1ChildBody.innerText = 'Exercício 5.2 - JavaScript DOM';
-body.appendChild(h1ChildBody)
+h1ChildBody.className = 'title';
+body.appendChild(h1ChildBody);
 
 mainChildBody.className = 'main-content';
 body.appendChild(mainChildBody);
