@@ -7,6 +7,7 @@ const sectionChildMain = document.createElement('section');
 const sectionSecondChildMain = document.createElement('section');
 const sectionThirdChildMain = document.createElement('section');
 const pChildSection = document.createElement('p');
+const imgChildSectionSecondChildMain = document.createElement('img');
 
 h1ChildBody.innerText = 'Exercício 5.2 - JavaScript DOM';
 body.appendChild(h1ChildBody)
@@ -27,3 +28,11 @@ main.appendChild(sectionSecondChildMain);
 
 sectionThirdChildMain.className = 'right-content';
 main.appendChild(sectionThirdChildMain);
+
+const sectionSecond = document.getElementsByClassName('left-content')[0];
+imgChildSectionSecondChildMain.src = 'https://picsum.photos/200';
+imgChildSectionSecondChildMain.alt = 'image';
+imgChildSectionSecondChildMain.className = 'small-image';
+sectionSecond.appendChild(imgChildSectionSecondChildMain);
+
+
