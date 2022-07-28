@@ -46,6 +46,7 @@ for (const iterator of numbersFull) {
   const ul = sectionThird.firstElementChild;
   const liChildUlChildSectionThird = document.createElement('li');
   liChildUlChildSectionThird.innerText = iterator;
+  liChildUlChildSectionThird.className = 'item-list';
   ul.appendChild(liChildUlChildSectionThird);
 }
 
@@ -63,3 +64,11 @@ sectionRight.style.marginRight = 'auto';
 
 const sectionCenter = document.getElementsByClassName('center-content')[0].parentElement;
 sectionCenter.style.backgroundColor = 'green';
+
+const itemsList = document.querySelectorAll('.item-list');
+
+for (const iterator of itemsList) {
+  if (iterator.innerText === 'nove' || iterator.innerText === 'dez') {
+    iterator.remove();
+  };
+};
