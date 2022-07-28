@@ -57,3 +57,6 @@ for (let index = 0; index < 3; index += 1) {
 
 const sectionLeft = document.getElementsByClassName('left-content')[0];
 main.removeChild(sectionLeft);
+
+const sectionRight = document.getElementsByClassName('right-content')[0];
+sectionRight.style.marginRight = 'auto';
