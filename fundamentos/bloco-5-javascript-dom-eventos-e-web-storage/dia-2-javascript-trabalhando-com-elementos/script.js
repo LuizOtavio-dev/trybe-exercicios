@@ -51,5 +51,6 @@ for (const iterator of numbersFull) {
 
 for (let index = 0; index < 3; index += 1) {
   const h3ChildMain = document.createElement('h3');
+  h3ChildMain.className = 'description';
   main.appendChild(h3ChildMain);
 }
