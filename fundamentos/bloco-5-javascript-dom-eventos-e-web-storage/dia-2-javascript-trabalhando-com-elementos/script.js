@@ -54,3 +54,6 @@ for (let index = 0; index < 3; index += 1) {
   h3ChildMain.className = 'description';
   main.appendChild(h3ChildMain);
 }
+
+const sectionLeft = document.getElementsByClassName('left-content')[0];
+main.removeChild(sectionLeft);
