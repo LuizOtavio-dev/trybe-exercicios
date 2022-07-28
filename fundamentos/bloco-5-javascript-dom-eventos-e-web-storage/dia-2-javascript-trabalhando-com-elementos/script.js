@@ -1,21 +1,25 @@
 // Parte 1
 
 const body = document.body;
-const elementH1 = document.createElement('h1');
-const elementMain = document.createElement('main');
-const elementSection = document.createElement('section');
-const elementPara = document.createElement('p');
+const h1ChildBody = document.createElement('h1');
+const mainChildBody = document.createElement('main');
+const sectionChildMain = document.createElement('section');
+const sectionSecondChildMain = document.createElement('section');
+const pChildSection = document.createElement('p');
 
-elementH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-body.appendChild(elementH1)
+h1ChildBody.innerText = 'Exercício 5.2 - JavaScript DOM';
+body.appendChild(h1ChildBody)
 
-elementMain.className = 'main-content';
-body.appendChild(elementMain);
+mainChildBody.className = 'main-content';
+body.appendChild(mainChildBody);
 
 const main = document.getElementsByClassName('main-content')[0];
-elementSection.className = 'center-content';
-main.appendChild(elementSection);
+sectionChildMain.className = 'center-content';
+main.appendChild(sectionChildMain);
 
 const section = document.getElementsByClassName('center-content')[0];
-elementPara.innerText = 'Parágrafo';
-section.appendChild(elementPara);
+pChildSection.innerText = 'Parágrafo';
+section.appendChild(pChildSection);
+
+sectionSecondChildMain.className = 'left-content';
+main.appendChild(sectionSecondChildMain);
