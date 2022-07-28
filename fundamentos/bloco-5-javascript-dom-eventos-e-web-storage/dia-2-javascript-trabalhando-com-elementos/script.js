@@ -47,3 +47,8 @@ for (const iterator of numbersFull) {
   liChildUlChildSectionThird.innerText = iterator;
   ul.appendChild(liChildUlChildSectionThird);
 }
+
+for (let index = 0; index < 3; index += 1) {
+  const h3ChildMain = document.createElement('h3');
+  main.appendChild(h3ChildMain);
+}
