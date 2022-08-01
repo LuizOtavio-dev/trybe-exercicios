@@ -163,4 +163,22 @@ function selectedTask(event) {
   }
 }
 
-divClassTask.addEventListener('click', selectedTask)
+divClassTask.addEventListener('click', selectedTask);
+
+// Exercício 10
+
+const elementClassSelected = document.querySelector('.task');
+
+function changeColorDay(event) {
+  const element = event.target;
+
+  if (elementClassSelected.className === 'task' || element.style.color === elementClassSelected.style.backgroundColor) {
+    element.style.color = 'rgb(119,119,119)';
+  } else {
+    element.style.color = elementClassSelected.style.backgroundColor;
+  }
+}
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('click', changeColorDay)
+}
