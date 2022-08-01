@@ -137,3 +137,14 @@ function addCustomTask(string) {
 }
 
 addCustomTask('Cozinhar');
+
+// Exercício 8
+
+function addColor(string) {
+  const divElement = document.createElement('div');
+  divElement.className = 'task';
+  divElement.style.backgroundColor = string;
+  elementClassMyTasks.appendChild(divElement);
+}
+
+addColor('red')
