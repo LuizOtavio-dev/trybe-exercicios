@@ -147,4 +147,20 @@ function addColor(string) {
   elementClassMyTasks.appendChild(divElement);
 }
 
-addColor('red')
+addColor('red');
+
+// Exercício 9
+
+const divClassTask = document.querySelector('.task');
+
+function selectedTask(event) {
+  const element = event.target;
+
+  if (element.className === 'task selected') {
+    element.classList.remove('selected');
+  } else {
+    element.classList.add('selected');
+  }
+}
+
+divClassTask.addEventListener('click', selectedTask)
