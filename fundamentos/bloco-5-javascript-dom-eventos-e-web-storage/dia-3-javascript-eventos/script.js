@@ -105,3 +105,23 @@ function showFriday() {
 }
 
 btnFriday.addEventListener('click', showFriday)
+
+
+// Exercício 6
+
+const days = document.querySelectorAll('.day');
+
+function increaseZoomEffect(event) {
+  const element = event.target;
+  element.style.fontSize = '25px';
+}
+
+function decreaseZoomEffect(event) {
+  const element = event.target;
+  element.style.fontSize = '20px';
+}
+
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('mouseover', increaseZoomEffect);
+  days[index].addEventListener('mouseleave', decreaseZoomEffect);
+}
