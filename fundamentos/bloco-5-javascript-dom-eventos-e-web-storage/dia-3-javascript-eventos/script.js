@@ -125,3 +125,15 @@ for (let index = 0; index < days.length; index += 1) {
   days[index].addEventListener('mouseover', increaseZoomEffect);
   days[index].addEventListener('mouseleave', decreaseZoomEffect);
 }
+
+// Exercício 7
+
+const elementClassMyTasks = document.querySelector('.my-tasks');
+
+function addCustomTask(string) {
+  const spanElement = document.createElement('span');
+  spanElement.innerText = string;
+  elementClassMyTasks.appendChild(spanElement);
+}
+
+addCustomTask('Cozinhar');
