@@ -15,8 +15,9 @@ createDaysOfTheWeek();
 
 // Exercício 1
 
+const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
 function createDays() {
-  const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysList = document.querySelector('#days');
 
   for (const iterator of decemberDaysList) {
@@ -73,7 +74,7 @@ btnHoliday.addEventListener('click', showHolidays);
 
 // Exercício 4
 
-function showFriday(string) {
+function createFridayButton(string) {
   const btnContainer = document.querySelector('.buttons-container');
   const buttonElement = document.createElement('button');
   buttonElement.innerText = string;
@@ -81,4 +82,26 @@ function showFriday(string) {
   btnContainer.appendChild(buttonElement);
 }
 
-showFriday('Sexta-feira');
+createFridayButton('Sexta-feira');
+
+// Exercício 5
+
+const btnFriday = document.querySelector('#btn-friday');
+let counter = 0;
+
+function showFriday() {
+  counter += 1;
+  const classFriday = document.querySelectorAll('.friday');
+  const classDay = document.querySelectorAll('.day');
+  if (counter % 2 !== 0) {
+    for (let index = 0; index < classFriday.length; index += 1) {
+      classFriday[index].innerText = 'Sexta-Feira';
+    }
+  } else {
+    for (let index = 0; index < classDay.length; index += 1) {
+      classDay[index].innerText = decemberDaysList[index];
+    }
+  }
+}
+
+btnFriday.addEventListener('click', showFriday)
