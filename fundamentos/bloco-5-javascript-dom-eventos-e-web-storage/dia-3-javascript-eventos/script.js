@@ -70,3 +70,15 @@ function showHolidays() {
 }
 
 btnHoliday.addEventListener('click', showHolidays);
+
+// Exercício 4
+
+function showFriday(string) {
+  const btnContainer = document.querySelector('.buttons-container');
+  const buttonElement = document.createElement('button');
+  buttonElement.innerText = string;
+  buttonElement.id = 'btn-friday';
+  btnContainer.appendChild(buttonElement);
+}
+
+showFriday('Sexta-feira');
