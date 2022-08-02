@@ -182,3 +182,27 @@ function changeColorDay(event) {
 for (let index = 0; index < days.length; index += 1) {
   days[index].addEventListener('click', changeColorDay)
 }
+
+// Bônus
+
+const addButton = document.querySelector('#btn-add');
+const taskList = document.querySelector('.task-list');
+const input = document.querySelector('#task-input');
+
+function addCommitment() {
+  if (input.value === '') {
+    alert('Erro');
+  } else {
+    const liElement = document.createElement('li');
+    liElement.innerText = input.value;
+    taskList.appendChild(liElement);
+    input.value = '';
+  }
+}
+
+addButton.addEventListener('click', addCommitment);
+input.addEventListener('keypress', (event) => { 
+  if (event.key === 'Enter') {
+    addCommitment()
+  }
+});
