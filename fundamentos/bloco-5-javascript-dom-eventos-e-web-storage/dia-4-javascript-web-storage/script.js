@@ -1,6 +1,7 @@
+const body = document.body;
 const elementFooter = document.querySelector('#footer');
-let placeholderInput = ['Cor de fundo'];
-let valueLocalStorage = ['background'];
+let placeholderInput = ['Cor de fundo', 'Cor do texto'];
+let valueLocalStorage = ['background', 'color'];
 
 for (let index = 0; index < placeholderInput.length; index += 1) {
   const inputElement = document.createElement('input');
@@ -17,22 +18,31 @@ for (let index = 0; index < placeholderInput.length; index += 1) {
 
 function changeBackgroundColor() {
   const input = document.querySelectorAll('.input')[0];
-  const body = document.body;
-  body.style.backgroundColor = input.value
   localStorage.setItem('background', input.value);
+  body.style.backgroundColor = input.value;
+  input.value = '';
+}
+
+function changeColor() {
+  const input = document.querySelectorAll('.input')[1];
+  localStorage.setItem('color', input.value);
+  body.style.color = input.value;
   input.value = '';
 }
 
 const btnBackground = document.querySelectorAll('.btn')[0];
-btnBackground.addEventListener('click', changeBackgroundColor);;
+btnBackground.addEventListener('click', changeBackgroundColor);
+
+const btnColor = document.querySelectorAll('.btn')[1];
+btnColor.addEventListener('click', changeColor)
 
 function initialWebStorage() {
-  const body = document.body;
   for (let index = 0; index < valueLocalStorage.length; index += 1) {
     if (localStorage.getItem(valueLocalStorage[index]) === null) {
       localStorage.setItem(valueLocalStorage[index], '');
     } else {
-      body.style.backgroundColor = localStorage.getItem(valueLocalStorage[index]);
+      body.style.backgroundColor = localStorage.getItem(valueLocalStorage[0]);
+      body.style.color = localStorage.getItem(valueLocalStorage[1]);
     }
   }
 }
