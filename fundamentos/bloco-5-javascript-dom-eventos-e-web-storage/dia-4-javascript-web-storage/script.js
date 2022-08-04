@@ -2,8 +2,8 @@ const body = document.body;
 const elementFooter = document.querySelector('#footer');
 const elementHeader = document.querySelector('h1');
 const elementPara = document.querySelector('p');
-let placeholderInput = ['Cor de fundo', 'Cor do texto', 'Tamanho da fonte ex.: 50px', 'Espaçamento ex.: 50px'];
-let valueLocalStorage = ['background', 'color', 'fontSize', 'line'];
+let placeholderInput = ['Cor de fundo', 'Cor do texto', 'Tamanho da fonte ex.: 50px', 'Espaçamento ex.: 50px', 'Tipo da fonte ex.: arial'];
+let valueLocalStorage = ['background', 'color', 'fontSize', 'line', 'font'];
 
 for (let index = 0; index < placeholderInput.length; index += 1) {
   const inputElement = document.createElement('input');
@@ -47,6 +47,14 @@ function changeLine() {
   input.value = '';
 }
 
+function changeFont() {
+  const input = document.querySelectorAll('.input')[4];
+  localStorage.setItem('font', input.value);
+  elementHeader.style.fontFamily = input.value;
+  elementPara.style.fontFamily = input.value;
+  input.value = '';
+}
+
 const btnBackground = document.querySelectorAll('.btn')[0];
 btnBackground.addEventListener('click', changeBackgroundColor);
 
@@ -59,6 +67,9 @@ btnFontSize.addEventListener('click', changeFontSize);
 const btnLine = document.querySelectorAll('.btn')[3];
 btnLine.addEventListener('click', changeLine);
 
+const btnFont = document.querySelectorAll('.btn')[4];
+btnFont.addEventListener('click', changeFont);
+
 function initialWebStorage() {
   for (let index = 0; index < valueLocalStorage.length; index += 1) {
     if (localStorage.getItem(valueLocalStorage[index]) === null) {
@@ -69,6 +80,8 @@ function initialWebStorage() {
       elementHeader.style.fontSize = localStorage.getItem(valueLocalStorage[2]);
       elementPara.style.fontSize = localStorage.getItem(valueLocalStorage[2]);
       elementPara.style.lineHeight = localStorage.getItem(valueLocalStorage[3]);
+      elementHeader.style.fontFamily = localStorage.getItem(valueLocalStorage[4]);
+      elementPara.style.fontFamily = localStorage.getItem(valueLocalStorage[4]);
     }
   }
 }
