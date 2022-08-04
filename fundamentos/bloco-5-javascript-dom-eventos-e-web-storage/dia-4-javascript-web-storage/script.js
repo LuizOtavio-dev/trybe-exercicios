@@ -1,7 +1,9 @@
 const body = document.body;
 const elementFooter = document.querySelector('#footer');
-let placeholderInput = ['Cor de fundo', 'Cor do texto'];
-let valueLocalStorage = ['background', 'color'];
+const elementHeader = document.querySelector('h1');
+const elementPara = document.querySelector('p');
+let placeholderInput = ['Cor de fundo', 'Cor do texto', 'Tamanho da fonte ex.: 50px'];
+let valueLocalStorage = ['background', 'color', 'fontSize'];
 
 for (let index = 0; index < placeholderInput.length; index += 1) {
   const inputElement = document.createElement('input');
@@ -30,11 +32,22 @@ function changeColor() {
   input.value = '';
 }
 
+function changeFontSize() {
+  const input = document.querySelectorAll('.input')[2];
+  localStorage.setItem('fontSize', input.value);
+  elementHeader.style.fontSize = input.value;
+  elementPara.style.fontSize = input.value;
+  input.value = '';
+}
+
 const btnBackground = document.querySelectorAll('.btn')[0];
 btnBackground.addEventListener('click', changeBackgroundColor);
 
 const btnColor = document.querySelectorAll('.btn')[1];
-btnColor.addEventListener('click', changeColor)
+btnColor.addEventListener('click', changeColor);
+
+const btnFontSize = document.querySelectorAll('.btn')[2];
+btnFontSize.addEventListener('click', changeFontSize);
 
 function initialWebStorage() {
   for (let index = 0; index < valueLocalStorage.length; index += 1) {
@@ -43,6 +56,8 @@ function initialWebStorage() {
     } else {
       body.style.backgroundColor = localStorage.getItem(valueLocalStorage[0]);
       body.style.color = localStorage.getItem(valueLocalStorage[1]);
+      elementHeader.style.fontSize = localStorage.getItem(valueLocalStorage[2]);
+      elementPara.style.fontSize = localStorage.getItem(valueLocalStorage[2]);
     }
   }
 }
