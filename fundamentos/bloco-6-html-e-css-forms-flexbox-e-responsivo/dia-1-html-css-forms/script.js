@@ -12,11 +12,14 @@ createElementButton('Limpar');
 
 const btn = document.querySelectorAll('.btn');
 const input = document.querySelectorAll('input');
+const inputCheckbox = document.querySelector('#agree2')
 
 for (let index = 0; index < btn.length; index += 1) {
   if (btn[index].innerText === 'Enviar') {
     btn[index].addEventListener('click', function(event) {
-      event.preventDefault();
+      if (inputCheckbox.checked !== true) {
+        event.preventDefault();        
+      }
     })
   }
   if (btn[index].innerText === 'Limpar') {
