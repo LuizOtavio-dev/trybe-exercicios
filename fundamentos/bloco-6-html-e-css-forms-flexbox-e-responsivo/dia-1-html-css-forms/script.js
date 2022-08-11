@@ -15,6 +15,8 @@ const input = document.querySelectorAll('input');
 const inputCheckbox = document.querySelector('#agree2');
 const nameOfTheDev = document.querySelector('#name');
 const emailOfTheDev = document.querySelector('#email');
+const textareaAnswer = document.querySelector('#answer');
+const paraTextarea = document.querySelector('#textarea');
 
 function sendButton() {
   for (let index = 0; index < btn.length; index += 1) {
@@ -48,4 +50,11 @@ function clearButton() {
 }
 
 clearButton();
-  
+
+let count = 0
+paraTextarea.innerText = count + '/500';
+
+textareaAnswer.addEventListener('keyup', function(event) {
+  count = textareaAnswer.value.length;
+  paraTextarea.innerText = count + '/500';
+})
