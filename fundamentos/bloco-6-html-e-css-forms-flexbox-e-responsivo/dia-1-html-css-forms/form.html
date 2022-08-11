@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios 6.1</title>
+</head>
+<body>
+  <form action="" id="form">
+    <fieldset>
+      <label for="name">Nome: </label>
+      <input type="text" id="name" name="name" min="10" max="40">
+      <br><br>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" min="10" max="40">
+      <br><br>
+      <p>Destino Preferido:</p>
+      <label for="city">
+        <input type="radio" id="city" name="destiny" value="city">Cidade
+      </label>
+      <label for="camp">
+        <input type="radio" id="camp" name="destiny" value="camp">Campo
+      </label>
+      <label for="beach">
+        <input type="radio" id="beach" name="destiny" value="beach">Praia
+      </label>
+      <label for="mountain">
+        <input type="radio" id="mountain" name="destiny" value="mountain">Montanhas
+      </label>
+      <br><br>
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+      <p>Espaço para digitar a resposta:</p>
+      <textarea name="answer" id="answer" cols="30" rows="5" maxlength="500" placeholder="Maximo 500 Caracteres"></textarea>
+      <p id="textarea"></p>
+      <p>Qual a melhor data para realizar sua viagem?</p>
+      <label for="date">Data: </label>
+      <input type="date" name="date" id="date">
+      <br><br>
+      <p>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+      <label for="agree1"> Concordo</label>
+      <input type="checkbox" name="agree1" id="agree1">
+      <br>
+      <p>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</p>
+      <label for="agree2">Concordo</label>
+      <input type="checkbox" name="agree2" id="agree2">
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
