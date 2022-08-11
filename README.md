@@ -42,14 +42,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
 - [X] 5-5: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-010-a-project-pixels-art/pull/144)_
-- [ ] 5-6: _[Projeto - Meme Generator]()_
-- [ ] 5-7: _[Projeto - Lista de tarefas]()_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _[Projeto - Carta Misteriosa]()_
+- [ ] 5-6: _[Projeto - Lista de tarefas]()_
+- [ ] 5-7: _[Projeto - Meme Generator]()_
+- [ ] 5-8: _[Projeto - Adivinhe a Cor]()_
+- [ ] 5-9: _[Projeto - Carta Misteriosa]()_
 
 ##### Bloco 6: HTML & CSS avançado
 
-- [ ] 6-1: _HTML & CSS - Forms_
+- [X] 6-1: _HTML & CSS - Forms_
 - [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
