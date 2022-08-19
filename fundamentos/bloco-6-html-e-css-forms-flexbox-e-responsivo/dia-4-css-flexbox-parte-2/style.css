@@ -18,6 +18,7 @@ body {
   display: flex;
   justify-content: center;
   flex: 0 1 268px;
+  order: -1;
 }
 
 .menu-container {
