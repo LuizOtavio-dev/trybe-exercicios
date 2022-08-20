@@ -73,8 +73,11 @@ body {
 }
 
 .aside-container {
+  align-items: center;
+  align-self: center;
+  background-color: aqua;
   display: flex;
-  flex: 0 350px;
+  flex: 1 350px;
   flex-direction: column;
   margin: 20px;
 }
