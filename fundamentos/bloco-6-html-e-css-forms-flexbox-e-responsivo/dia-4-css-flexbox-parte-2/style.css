@@ -69,7 +69,7 @@ body {
   background-color: #5C687C;
   border: black solid 1px;
   display: flex;
-  flex: 0 16%;
+  flex: 1 16%;
   height: 150px;
   justify-content: center;
   margin: 10px;
