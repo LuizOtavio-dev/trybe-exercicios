@@ -1,3 +1,4 @@
+// Parte 1
 // Exercício 1
 
 const testingScope = escopo => {
@@ -22,3 +23,20 @@ const sortOddsAndEvens = () => oddsAndEvens.sort(function(a, b){return a - b});
 const phrase = `Os números ${sortOddsAndEvens()} se encontram ordenados de forma crescente!`
 
 console.log(phrase);
+
+// Parte 2
+// Exercício 1
+
+const mult = (number) => {
+  let result = 2;
+  for (let index = 3; index <= number; index += 1) {
+    result *= index;
+  }
+  return result;
+}
+
+const factorial = number => number === 0 ? 1 : mult(number);
+
+const phraseFactorial = `Esse é o fatorial ${factorial(5)}`
+
+console.log(phraseFactorial);
