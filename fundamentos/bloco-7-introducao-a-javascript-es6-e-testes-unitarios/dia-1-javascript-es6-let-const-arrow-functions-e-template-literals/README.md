@@ -97,7 +97,7 @@ Os requisitos do exercício são:
 
   Dica: Nesse exercício utilize document. getElementById para retornar o elemento do DOM que deseja.
 
-5. Crie duas funções JavaScript com as seguintes especificações:
+4. Crie duas funções JavaScript com as seguintes especificações:
 
   Não se esqueça de usar template literals
 
