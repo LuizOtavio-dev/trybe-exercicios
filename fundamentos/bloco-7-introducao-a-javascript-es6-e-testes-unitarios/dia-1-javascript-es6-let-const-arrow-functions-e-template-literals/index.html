@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Cliques</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      align-items: center;
+      background-color: gray;
+      color: white;
+      display: flex;
+      height: 80px;
+      justify-content: center;
+    }
+
+    section {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    span {
+      border: 1px solid black;
+      border-radius: 100%;
+      font-size: 3em;
+      margin: 10px;
+      padding: 50px;
+    }
+
+    button {
+      background-color: darkcyan;
+      border: 1px solid cyan;
+      border-radius: 10%;
+      box-shadow: 2px 2px gray;
+      color: white;
+      height: 50px;
+      width: 130px;
+    }
+
+    button:hover {
+      background-color: white;
+      color: cyan;
+    }
+
+    button:active {
+      background-color: darkcyan;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contador de Cliques</h1>
+  </header>
+  <main>
+    <section>
+      <span id="counter"></span>
+      <button id="btn">Click aqui!</button>
+    </section>
+  </main>
+  <script>
+    const span = document.getElementById('counter');
+    const btn = document.getElementById('btn');
+    let clickCount = 0;
+
+    btn.addEventListener('click', () => {
+      clickCount += 1;
+      span.innerText = clickCount;
+      const initialNumber = JSON.stringify(clickCount);
+      sessionStorage.setItem('count', initialNumber);
+    })
+
+    window.onload = () => {
+      if (sessionStorage.getItem('count') === null) {
+        sessionStorage.setItem('count', '0')
+        span.innerText = sessionStorage.getItem('count');
+      } else {
+        const initialNumber = JSON.parse(sessionStorage.getItem('count'));
+        clickCount = initialNumber;
+        span.innerText = initialNumber;
+      }
+    }
+  </script>
+</body>
+</html>
