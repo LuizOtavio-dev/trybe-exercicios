@@ -32,3 +32,15 @@ const factorial = number => number > 1 ? number * factorial(number - 1) : 1;
 const phraseFactorial = `Esse é o fatorial ${factorial(5)}`
 
 console.log(phraseFactorial);
+
+// Exercício 2
+
+const longestWord = (phrase) => {
+  const word = phrase.split(' ');
+  let longest = '';
+  for (const iterator of word) {
+    iterator.length > longest.length ? longest = iterator : longest;
+  }
+  return longest;
+}
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
