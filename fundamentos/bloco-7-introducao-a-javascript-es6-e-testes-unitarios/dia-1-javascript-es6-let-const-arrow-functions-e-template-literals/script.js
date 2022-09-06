@@ -44,3 +44,35 @@ const longestWord = (phrase) => {
   return longest;
 }
 console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+
+// Exercício 4
+
+const substituaX = nome => {
+  const frase = 'Tryber x aqui!';
+  const encontraX = frase.split(' ');
+  const novaFrase = [];
+  for (const iterator of encontraX) {
+    iterator === 'x' ? novaFrase.push(nome) : novaFrase.push(iterator);
+  }
+  return novaFrase.join(' ');
+}
+
+const minhasSkills = frase => {
+  const skills = ['HTML', 'CSS', 'JavaScript'];
+  let fraseCompleta = 
+  `
+  ${frase} 
+
+  Minhas três principais habilidades são:
+  
+  - ${skills[0]}
+  
+  - ${skills[1]}
+  
+  - ${skills[2]}
+  `;
+
+  return fraseCompleta;
+}
+
+console.log(minhasSkills(substituaX('Luiz')));
