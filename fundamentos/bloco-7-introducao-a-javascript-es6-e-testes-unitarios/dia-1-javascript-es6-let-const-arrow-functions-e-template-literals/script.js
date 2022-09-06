@@ -27,15 +27,7 @@ console.log(phrase);
 // Parte 2
 // Exercício 1
 
-const mult = (number) => {
-  let result = 2;
-  for (let index = 3; index <= number; index += 1) {
-    result *= index;
-  }
-  return result;
-}
-
-const factorial = number => number === 0 ? 1 : mult(number);
+const factorial = number => number > 1 ? number * factorial(number - 1) : 1;
 
 const phraseFactorial = `Esse é o fatorial ${factorial(5)}`
 
