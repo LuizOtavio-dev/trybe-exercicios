@@ -104,3 +104,9 @@ showSizeObj(lesson1);
 const listValues = obj => console.log(Object.values(obj));
 
 listValues(lesson1);
+
+// Exercício 5
+
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+
+console.log(allLessons);
