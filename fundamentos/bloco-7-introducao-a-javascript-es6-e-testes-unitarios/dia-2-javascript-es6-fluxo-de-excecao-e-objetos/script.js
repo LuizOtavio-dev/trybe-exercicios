@@ -92,3 +92,9 @@ addKey(lesson2, 'turno', 'noite');
 const listKeys = obj => console.log(Object.keys(obj));
 
 listKeys(lesson1);
+
+// Exercício 3
+
+const showSizeObj = obj => console.log(Object.keys(obj).length);
+
+showSizeObj(lesson1);
