@@ -110,3 +110,16 @@ listValues(lesson1);
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 console.log(allLessons);
+
+// Exercício 6
+
+const totalStudents = obj => {
+  let total = 0;
+  const students = Object.keys(obj);
+  for (const key in students) {
+    total += obj[students[key]].numeroEstudantes;
+  }
+  return total;
+}
+
+console.log(totalStudents(allLessons));
