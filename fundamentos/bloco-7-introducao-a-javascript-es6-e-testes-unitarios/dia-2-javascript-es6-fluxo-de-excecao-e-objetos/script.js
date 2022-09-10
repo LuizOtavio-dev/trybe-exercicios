@@ -86,3 +86,9 @@ const lesson3 = {
 const addKey = (obj, key, value) => obj[key] = value;
 
 addKey(lesson2, 'turno', 'noite');
+
+// Exercício 2
+
+const listKeys = obj => console.log(Object.keys(obj));
+
+listKeys(lesson1);
