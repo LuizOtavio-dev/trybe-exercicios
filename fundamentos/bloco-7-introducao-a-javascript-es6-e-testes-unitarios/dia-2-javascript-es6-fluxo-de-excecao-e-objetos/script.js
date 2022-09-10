@@ -98,3 +98,9 @@ listKeys(lesson1);
 const showSizeObj = obj => console.log(Object.keys(obj).length);
 
 showSizeObj(lesson1);
+
+// Exercício 4
+
+const listValues = obj => console.log(Object.values(obj));
+
+listValues(lesson1);
