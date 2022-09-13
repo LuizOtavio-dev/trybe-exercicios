@@ -149,11 +149,24 @@ console.log(verifyPair(lesson1, 'materia', 'Matemática'));
 const totalMathStudents = obj => {
   let total = 0
   for (const key in obj) {
-    if (obj[key].materia === 'Matemática') {
-      total += obj[key].numeroEstudantes;
-    }
+    if (obj[key].materia === 'Matemática') total += obj[key].numeroEstudantes;
   }
   return total;
 }
 
 console.log(totalMathStudents(allLessons));
+
+// Exercício 2
+
+const createReport = (obj, teacher) => {
+  const report = {professor: teacher, aulas: [], estudantes: 0};
+  for (const key in obj) {
+    if (obj[key].professor === teacher) {
+      report.aulas.push(obj[key].materia);
+      report.estudantes += obj[key].numeroEstudantes;
+    }
+  }
+  return report
+}
+
+console.log(createReport(allLessons, 'Carlos'));
