@@ -142,3 +142,18 @@ const verifyPair = (obj, key, value) => {
 }
 
 console.log(verifyPair(lesson1, 'materia', 'Matemática'));
+
+// Bônus
+// Exercício 1
+
+const totalMathStudents = obj => {
+  let total = 0
+  for (const key in obj) {
+    if (obj[key].materia === 'Matemática') {
+      total += obj[key].numeroEstudantes;
+    }
+  }
+  return total;
+}
+
+console.log(totalMathStudents(allLessons));
