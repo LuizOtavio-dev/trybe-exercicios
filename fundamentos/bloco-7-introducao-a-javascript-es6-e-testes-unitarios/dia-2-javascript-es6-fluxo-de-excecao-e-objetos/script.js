@@ -129,3 +129,16 @@ console.log(totalStudents(allLessons));
 const valueByNumber = (obj, number) => Object.values(obj)[number];
 
 console.log(valueByNumber(lesson1, 0));
+
+// Exercício 8
+
+const verifyPair = (obj, key, value) => {
+  let equal = false;
+  const objPair = Object.entries(obj);
+  for (const index in objPair) {
+    if (objPair[index][0] === key && objPair[index][1] === value) equal = true;
+  }
+  return equal;
+}
+
+console.log(verifyPair(lesson1, 'materia', 'Matemática'));
