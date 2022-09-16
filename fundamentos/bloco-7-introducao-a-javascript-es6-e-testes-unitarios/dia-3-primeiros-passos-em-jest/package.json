@@ -1,0 +1,15 @@
+{
+  "name": "dia-3-primeiros-passos-em-jest",
+  "version": "1.0.0",
+  "description": "O objetivo dos exercícios desse dia foi colocar em prática o que aprendi sobre testes unitários e também sobre como testar em pequenos passos utilizando Jest; 🚀",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
