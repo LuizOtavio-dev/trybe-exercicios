@@ -23,4 +23,21 @@ const bet = (numberBet) => {
   return checkBet(numberBet, drawnNumber)
 }
 
-console.log(bet(3));
+bet(3);
+
+// Exercício 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const compareAnswers = (right, answer) => {
+  let points = 0;
+  for (const key in right) {
+    if (right[key] === answer[key]) points += 1;
+    if (right[key] !== answer[key] && answer[key] !== 'N.A') points -= 0.5;
+  }
+  return `Total de pontos obtidos: ${points}.`;
+};
+
+const evaluatesStudent = (right, answer, points) => points(right, answer);
+
+evaluatesStudent(RIGHT_ANSWERS, STUDENT_ANSWERS, compareAnswers);
