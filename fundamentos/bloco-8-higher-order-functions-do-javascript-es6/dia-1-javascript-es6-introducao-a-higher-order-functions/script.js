@@ -41,3 +41,31 @@ const compareAnswers = (right, answer) => {
 const evaluatesStudent = (right, answer, points) => points(right, answer);
 
 evaluatesStudent(RIGHT_ANSWERS, STUDENT_ANSWERS, compareAnswers);
+
+// Bônus
+// Exercício 1 - Parte 1
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const dragonDamage = (damage) => Math.floor(Math.random() * (damage - 15 + 1) + 15);
+
+dragonDamage(battleMembers.dragon.strength);
