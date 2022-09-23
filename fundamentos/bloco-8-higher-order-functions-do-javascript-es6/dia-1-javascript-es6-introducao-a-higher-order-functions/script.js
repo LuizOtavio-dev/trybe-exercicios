@@ -74,3 +74,12 @@ dragonDamage(battleMembers.dragon.strength);
 const warriorDamage = (strength, weapon) => Math.floor(Math.random() * ((strength * weapon) - strength + 1) + strength);
 
 warriorDamage(battleMembers.warrior.strength, battleMembers.warrior.weaponDmg);
+
+// Exercício 3
+const mageDamage = (intelligence) => Math.floor(Math.random() * ((intelligence * 2) - intelligence + 1) + intelligence);
+
+const mageMana = (mana) => mana >= 15 ? 15 : 'Não possui mana suficiente';
+
+const mageAttack = (dmg, mn) => ({ intelligence: dmg(battleMembers.mage.intelligence), mana: mn(battleMembers.mage.mana) });
+
+mageAttack(mageDamage, mageMana);
