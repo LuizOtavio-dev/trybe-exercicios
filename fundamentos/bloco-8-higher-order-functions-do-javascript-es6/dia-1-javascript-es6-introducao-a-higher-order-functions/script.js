@@ -89,6 +89,15 @@ const gameActions = {
     dragon.healthPoints -= warriorDamage;
     warrior.damage = warriorDamage;
   },
+  // Exercício 2
+  mageTurn: (mageAttack) => {
+    const mageTurnStats = mageAttack(mageDamage, mageMana);
+    const mageDmg = mageTurnStats.intelligence;
+    typeof mageTurnStats.mana !== 'string' ? mage.mana -= mageTurnStats.mana : mageTurnStats.mana;
+    dragon.healthPoints -= mageDmg;
+    mage.damage = mageDmg;
+  },
 };
 
 gameActions.warriorTurn(warriorDamage);
+gameActions.mageTurn(mageAttack);
