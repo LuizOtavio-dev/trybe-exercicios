@@ -68,8 +68,6 @@ const battleMembers = { mage, warrior, dragon };
 
 const dragonDamage = (damage) => Math.floor(Math.random() * (damage - 15 + 1) + 15);
 
-dragonDamage(dragon.strength);
-
 // Exercício 2
 const warriorDamage = (strength, weapon) => Math.floor(Math.random() * ((strength * weapon) - strength + 1) + strength);
 
@@ -79,8 +77,6 @@ const mageDamage = (intelligence) => Math.floor(Math.random() * ((intelligence *
 const mageMana = (mana) => mana >= 15 ? 15 : 'Não possui mana suficiente';
 
 const mageAttack = (dmg, mn) => ({ intelligence: dmg(mage.intelligence), mana: mn(mage.mana) });
-
-mageAttack(mageDamage, mageMana);
 
 //Exercício 1 - Parte 2
 const gameActions = {
@@ -97,7 +93,15 @@ const gameActions = {
     dragon.healthPoints -= mageDmg;
     mage.damage = mageDmg;
   },
+  // Exercício 3
+  dragonTurn: (dragonAttack) => {
+    const dragonDamage = dragonAttack(dragon.strength);
+    mage.healthPoints -= dragonDamage;
+    warrior.healthPoints -= dragonDamage;
+    dragon.damage = dragonDamage;
+  },
 };
 
 gameActions.warriorTurn(warriorDamage);
 gameActions.mageTurn(mageAttack);
+gameActions.dragonTurn(dragonDamage);
