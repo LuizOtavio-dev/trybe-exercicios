@@ -94,3 +94,9 @@ booksOrderedByReleaseYearDesc(books);
 const everyoneWasBornOnSecXX = books => books.every((book) => book.author.birthYear > 1901 && book.author.birthYear < 2000);
 
 everyoneWasBornOnSecXX(books);
+
+// Exercício 6
+
+const someBookWasReleaseOnThe80s = books => books.some((book) => book.releaseYear > 1980 && book.releaseYear < 1989);
+
+someBookWasReleaseOnThe80s(books);
