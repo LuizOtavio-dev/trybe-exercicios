@@ -79,12 +79,18 @@ smallerName(books);
 
 // Exercício 3
 
-const getNamedBook = books => books.find((book) => book.name.length === 26)
+const getNamedBook = books => books.find((book) => book.name.length === 26);
 
 getNamedBook(books);
 
 // Exercício 4
 
-const booksOrderedByReleaseYearDesc = books => books.sort((a, b) => b.releaseYear - a.releaseYear)
+const booksOrderedByReleaseYearDesc = books => books.sort((a, b) => b.releaseYear - a.releaseYear);
 
 booksOrderedByReleaseYearDesc(books);
+
+// Exercício 5
+
+const everyoneWasBornOnSecXX = books => books.every((book) => book.author.birthYear > 1901 && book.author.birthYear < 2000);
+
+everyoneWasBornOnSecXX(books);
