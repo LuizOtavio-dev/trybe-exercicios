@@ -75,4 +75,10 @@ const smallerName = books => {
   return nameBook;
 }
 
-console.log(smallerName(books));
+smallerName(books);
+
+// Exercício 3
+
+const getNamedBook = books => books.find((book) => book.name.length === 26)
+
+getNamedBook(books);
