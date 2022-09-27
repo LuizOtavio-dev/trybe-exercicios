@@ -100,3 +100,16 @@ everyoneWasBornOnSecXX(books);
 const someBookWasReleaseOnThe80s = books => books.some((book) => book.releaseYear > 1980 && book.releaseYear < 1989);
 
 someBookWasReleaseOnThe80s(books);
+
+// Exercício 7
+
+const authorUnique = books => {
+  return books.every(bookEvery =>
+    !books.some(bookSome =>
+      (bookSome.author.birthYear === bookEvery.author.birthYear)
+      && (bookSome.author.name !== bookEvery.author.name)
+    )
+  )
+};
+
+console.log(authorUnique(books));
