@@ -66,3 +66,13 @@ const books = [
 const authorBornIn1947 = (books) => (books.find((book) => book.author.birthYear === 1947));
 
 authorBornIn1947(books);
+
+// Exercício 2
+
+const smallerName = books => {
+  let nameBook = books[0].name;
+  books.forEach(book => {if (book.name.length < nameBook.length) nameBook = book.name});
+  return nameBook;
+}
+
+console.log(smallerName(books));
