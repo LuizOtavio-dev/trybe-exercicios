@@ -74,3 +74,9 @@ const nameAndAge = objBooks => objBooks.map(book => ({
 })).sort((a, b) => a.age - b.age);
 
 nameAndAge(books);
+
+// Exercício 3
+
+const fantasyOrScienceFiction = objBooks => objBooks.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
+
+fantasyOrScienceFiction(books);
