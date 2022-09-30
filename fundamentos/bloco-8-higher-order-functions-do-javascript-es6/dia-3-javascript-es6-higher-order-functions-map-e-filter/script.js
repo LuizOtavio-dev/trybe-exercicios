@@ -86,3 +86,9 @@ fantasyOrScienceFiction(books);
 const oldBooksOrdered = objBooks => objBooks.filter(book => 2022 - book.releaseYear > 60).sort((a, b) => a.releaseYear - b.releaseYear);
 
 oldBooksOrdered(books);
+
+// Exercício 5
+
+const fantasyOrScienceFictionAuthors = objBooks => fantasyOrScienceFiction(objBooks).map(book => book.author.name).sort();
+
+fantasyOrScienceFictionAuthors(books);
