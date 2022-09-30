@@ -80,3 +80,9 @@ nameAndAge(books);
 const fantasyOrScienceFiction = objBooks => objBooks.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
 
 fantasyOrScienceFiction(books);
+
+// Exercício 4
+
+const oldBooksOrdered = objBooks => objBooks.filter(book => 2022 - book.releaseYear > 60).sort((a, b) => a.releaseYear - b.releaseYear);
+
+oldBooksOrdered(books);
