@@ -65,4 +65,12 @@ const books = [
 
 const formatedBookNames = objBooks => objBooks.map(book => `${book.name} - ${book.genre} - ${book.author.name}`);
 
-console.log(formatedBookNames(books));
+formatedBookNames(books);
+
+// Exercício 2
+
+const nameAndAge = objBooks => objBooks.map(book => ({
+  age: book.releaseYear - book.author.birthYear, author: book.author.name
+})).sort((a, b) => a.age - b.age);
+
+nameAndAge(books);
