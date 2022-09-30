@@ -92,3 +92,9 @@ oldBooksOrdered(books);
 const fantasyOrScienceFictionAuthors = objBooks => fantasyOrScienceFiction(objBooks).map(book => book.author.name).sort();
 
 fantasyOrScienceFictionAuthors(books);
+
+// Exercício 6
+
+const oldBooks = objBooks => oldBooksOrdered(objBooks).map(book => book.name);
+
+oldBooks(books);
