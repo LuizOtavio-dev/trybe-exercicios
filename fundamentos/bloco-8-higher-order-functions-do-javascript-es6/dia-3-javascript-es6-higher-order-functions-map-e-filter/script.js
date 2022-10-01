@@ -98,3 +98,13 @@ fantasyOrScienceFictionAuthors(books);
 const oldBooks = objBooks => oldBooksOrdered(objBooks).map(book => book.name);
 
 oldBooks(books);
+
+// Exercício 7
+
+const authorWith3DotsOnName = objBooks => objBooks.find(book => (
+  book.author.name[1] === '.'
+  && book.author.name[4] === '.'
+  && book.author.name[7] === '.'
+)).name;
+
+console.log(authorWith3DotsOnName(books));
