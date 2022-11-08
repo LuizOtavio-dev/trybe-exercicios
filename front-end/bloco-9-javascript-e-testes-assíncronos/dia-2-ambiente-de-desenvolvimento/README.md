@@ -8,7 +8,7 @@ Os requisitos do exercício são:
 
 1. Crie um projeto npm do zero;
 
-2. Instale o vite e a biblioteca que iremos utilizar: validator.js;
+2. Instale o vite (https://vitejs.dev/) e a biblioteca que iremos utilizar: validator.js (https://www.npmjs.com/package/validator);
 
 3. Estruture uma página HTML com um formulário;
 

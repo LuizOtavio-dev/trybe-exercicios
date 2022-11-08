@@ -1,0 +1,12 @@
+{
+  "name": "validador-de-campos",
+  "version": "1.0.0",
+  "description": "Formulário com vampos validados, utilizando a biblioteca validator.js; 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["validator", "form"],
+  "author": "Luiz Otavio",
+  "license": "ISC"
+}
