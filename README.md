@@ -78,7 +78,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _Ambiente de Desenvolvimento_
-- [ ] 9-3: _Promises e fetch_
+- [X] 9-3: _Promises e fetch_
 - [ ] 9-4: _Prática - Casa de câmbio_
 - [ ] 9-5: _Async, await e testes assíncronos_
 - [ ] 9-6: _[Projeto - Carrinho de Compras]()_
