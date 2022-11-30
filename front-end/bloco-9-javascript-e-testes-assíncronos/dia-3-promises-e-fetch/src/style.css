@@ -31,12 +31,14 @@ h1 {
 #btn {
   background-color: greenyellow;
   border: none;
-  box-shadow: 2px 2px 3px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 3px gray;
+  color: cadetblue;
   margin: 20px;
   padding: 8px;
 }
 
 #btn:hover {
-  box-shadow: 3px 3px 5px;
-  font-weight: bolder;
+  background-color: rgb(149, 248, 0);
+  color: rgb(66, 157, 161);
 }
