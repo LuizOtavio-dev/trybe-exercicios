@@ -2,7 +2,7 @@ import './style.css';
 
 const btnGetDog = document.querySelector('#btn-get-dog');
 const btnGetCat = document.querySelector('#btn-get-cat');
-// const btnSuprise = document.querySelector('#btn-surprise');
+const btnSuprise = document.querySelector('#btn-surprise');
 const imgRandom = document.querySelector('#img-random');
 
 const API_DOG = 'https://dog.ceo/api/breeds/image/random';
@@ -21,5 +21,17 @@ btnGetCat.addEventListener('click', () => {
     .then((res) => res.json())
     .then(({ file }) => {
       imgRandom.src = file;
+    });
+});
+
+btnSuprise.addEventListener('click', () => {
+  Promise.any([
+    fetch(API_DOG),
+    fetch(API_CAT),
+  ])
+    .then((res) => res.json())
+    .then((data) => {
+      const imgURL = Object.values(data)[0];
+      imgRandom.src = imgURL;
     });
 });
