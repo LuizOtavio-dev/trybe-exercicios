@@ -7,18 +7,20 @@
   <title>Casa de Câmbio</title>
 </head>
 <body>
-  <header>
+  <header id="header">
     <h1>Casa de Câmbio</h1>
   </header>
-  <main>
-    <section>
-      <div>
-        <label for="input">Digite a moeda:</label>
-        <input type="text" placeholder="USD">
+  <main id="container-main">
+    <section id="input-section">
+      <div id="container-input">
+        <label for="input-coin">Digite a moeda:</label>
+        <input type="text" placeholder="USD" id="input-coin">
       </div>
-      <button>Pesquisar</button>
+      <button id="btn-search">Pesquisar</button>
     </section>
-    <section></section>
+    <section id="result-section">
+      <ul id="list-coin"></ul>
+    </section>
   </main>
   <script src="./src/main.js" type="module"></script>
 </body>
