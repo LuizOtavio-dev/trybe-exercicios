@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import './style.css';
 
 const inputCoin = document.querySelector('#input-coin');
@@ -18,10 +19,22 @@ const createList = (data) => {
 };
 
 btnSearch.addEventListener('click', () => {
-  const COIN = inputCoin.value;
+  const COIN = inputCoin.value.toUpperCase();
 
   fetch(`${API}/${COIN}`)
     .then(res => res.json())
-    .then(({ rates }) => createList(rates))
-    .catch(error => window.alert(error.message));
+    .then(({ rates }) => {
+      const valueIsTrue = Object.entries(rates).some(rate => rate[0] === COIN);
+      !valueIsTrue || !rates 
+        ? new Error
+        : createList(rates)
+    })
+    .catch(error => {
+      Swal.fire({
+        title: 'Coin not found',
+        text: error.message,
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
+    });
 });
