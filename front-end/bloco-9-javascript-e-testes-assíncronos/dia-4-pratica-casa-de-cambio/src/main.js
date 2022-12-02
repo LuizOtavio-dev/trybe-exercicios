@@ -19,19 +19,23 @@ const createList = (data) => {
 };
 
 btnSearch.addEventListener('click', () => {
-  const COIN = inputCoin.value.toUpperCase();
+  const COIN = inputCoin.value;
 
   fetch(`${API}/${COIN}`)
     .then(res => res.json())
     .then(({ rates }) => {
-      const valueIsTrue = Object.entries(rates).some(rate => rate[0] === COIN);
-      !valueIsTrue || !rates 
-        ? new Error
-        : createList(rates)
+      if (!rates) throw new Error ('Você precisa passar uma moeda!');
+
+      const coinRates = Object.keys(rates)
+      const valueIsTrue = coinRates.some(rate => rate === COIN.toUpperCase());
+      
+      if (!valueIsTrue) throw new Error('Moeda não existente!');
+
+      createList(rates);
     })
     .catch(error => {
       Swal.fire({
-        title: 'Coin not found',
+        title: 'Ops ...',
         text: error.message,
         icon: 'error',
         confirmButtonText: 'Ok'
