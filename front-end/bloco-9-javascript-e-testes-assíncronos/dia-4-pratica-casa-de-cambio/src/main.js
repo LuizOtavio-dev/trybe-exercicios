@@ -4,33 +4,35 @@ import './style.css';
 const inputCoin = document.querySelector('#input-coin');
 const btnSearch = document.querySelector('#btn-search');
 const listCoin = document.querySelector('#list-coin');
+const titleCoin = document.querySelector('#title-coin')
 
-const API = 'https://api.exchangerate.host';
+const API = 'https://api.exchangerate.host/latest?base=';
 
 const createList = (data) => {
   const rates = Object.entries(data);
 
+  listCoin.innerHTML = '';
+
   rates.forEach(rate => {
+    const [coin, value] = rate;
     const li = document.createElement('li');
-    li.innerHTML = `${rate[0]}: ${rate[1]}`;
+    li.innerHTML = `${coin}: ${value.toFixed(3)}`;
     li.className = 'rate';
     listCoin.appendChild(li);
   });
 };
 
-btnSearch.addEventListener('click', () => {
-  const COIN = inputCoin.value;
-
-  fetch(`${API}/${COIN}`)
-    .then(res => res.json())
-    .then(({ rates }) => {
-      if (!rates) throw new Error ('Você precisa passar uma moeda!');
-
-      const coinRates = Object.keys(rates)
-      const valueIsTrue = coinRates.some(rate => rate === COIN.toUpperCase());
+const fetchAPI = () => {
+  const COIN = inputCoin.value.toUpperCase();
+  
+  fetch(`${API}${COIN}`)
+  .then(res => res.json())
+  .then(({ rates, base }) => {
+      if (!COIN) throw new Error ('Você precisa passar uma moeda!');
+      if (base !== COIN) throw new Error('Moeda não existente!');
+     
+      titleCoin.innerHTML = `Valores referentes a 1 ${COIN}`;
       
-      if (!valueIsTrue) throw new Error('Moeda não existente!');
-
       createList(rates);
     })
     .catch(error => {
@@ -41,4 +43,6 @@ btnSearch.addEventListener('click', () => {
         confirmButtonText: 'Ok'
       })
     });
-});
+};
+
+btnSearch.addEventListener('click', fetchAPI);
