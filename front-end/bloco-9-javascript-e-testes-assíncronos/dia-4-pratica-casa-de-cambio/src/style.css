@@ -1,6 +1,114 @@
 * {
   box-sizing: border-box;
+  list-style: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0px;
   padding: 0px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: #0d1b2a;
+}
+
+#header {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+#exchange {
+  color: #95EBA8;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+#input-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#label-input-coin{
+  font-size: 12px;
+}
+
+#input-coin {
+  background-color: #1b263b;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 10px 0px 0px;
+  padding: 5px;
+  width: 100px;
+}
+
+#btn-search {
+  width: 100px;
+  background: #96EB95;
+  border: 2px solid #bde8bd;
+  border-radius: 10px;
+  color: #373737;;
+  padding: 3px;
+}
+
+#btn-search:hover {
+  background: #70ec6e;
+}
+
+.result-section {
+  align-items: center;
+  align-self: center;
+  background-color: #1b263b;
+  border-radius: 20px;
+  height: 583px;
+  margin: 30px;
+  padding: 40px;
+  width: 900px;
+}
+
+#title-coin{
+  margin-bottom: 30px;
+}
+
+#list-coin {
+  overflow: auto;
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#list-coin::-webkit-scrollbar {
+  width: 10px;
+}
+
+#list-coin::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+#list-coin::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+#list-coin::-webkit-scrollbar-thumb:hover {
+  background: rgb(78, 78, 78);
+}
+
+.rate {
+  align-items: center;
+  background-color: #0d1b2a;
+  border-radius: 20px;
+  display: flex;
+  font-size: 12px;
+  height: 30px;
+  justify-content: center;
+  margin: 5px;
+  width: 100px;
 }

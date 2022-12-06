@@ -8,18 +8,19 @@
 </head>
 <body>
   <header id="header">
-    <h1>Casa de Câmbio</h1>
+    <h1>Casa de <span id="exchange">Câmbio</span></h1>
   </header>
-  <main id="container-main">
+  <main class="container-main">
     <section id="input-section">
-      <div id="container-input">
-        <label for="input-coin">Digite a moeda:
-          <input type="text" placeholder="USD" id="input-coin">
-        </label>
+      <div class="container-main">
+        <label for="input-coin" id="label-input-coin">Digite a moeda:</label>
+        <input type="text" placeholder="USD" id="input-coin">
       </div>
-      <button id="btn-search">Pesquisar</button>
+      <div class="container-main">
+        <button id="btn-search">Pesquisar</button>
+      </div>
     </section>
-    <section id="result-section">
+    <section class="container-main result-section">
       <h2 id="title-coin"></h2>
       <ul id="list-coin"></ul>
     </section>
