@@ -80,7 +80,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 9-2: _Ambiente de Desenvolvimento_
 - [X] 9-3: _Promises e fetch_
 - [X] 9-4: _Prática - [Projeto Casa de câmbio](https://github.com/LuizOtavio-dev/trybe-exercicios/pull/32)_
-- [ ] 9-5: _Async, await e testes assíncronos_
+- [X] 9-5: _Async, await e testes assíncronos_
 - [ ] 9-6: _[Projeto - Carrinho de Compras]()_
 
 ##### Bloco 10: Introdução - React
