@@ -1,0 +1,21 @@
+{
+  "name": "dia-4-pratica-casa-de-cambio",
+  "version": "1.0.0",
+  "description": "O objetivo dos exercícios desse dia foi colocar em prática tudo o que aprendi nos últimos dias sobre Ambiente de desenvolvimento, Promises e Fetch; 🚀",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.6.15",
+    "vite": "^3.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11"
+  }
+}
