@@ -3,7 +3,7 @@ import { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <h1>Conteúdos de Frontend</h1>
+      <h1 className='title'>Conteúdos de Frontend</h1>
     )
   }
 }
