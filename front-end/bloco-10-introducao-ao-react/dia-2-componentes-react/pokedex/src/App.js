@@ -1,9 +1,13 @@
 import './App.css';
+import datas from './data'
+import Pokemon from './components/Pokemon';
 
 function App() {
   return (
     <div className="App">
-        <h1>Pokedex</h1>
+      <ul>
+        {datas.map((data) => <Pokemon pokemon={data}/>)}
+      </ul>
     </div>
   );
 }
