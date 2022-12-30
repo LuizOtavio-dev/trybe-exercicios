@@ -11,4 +11,25 @@
   background-color: #282c34;
   color: white;
   display: flex;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li {
+  background-color: #17191d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  margin: 10px;
+  width:350px;
+}
+
+li:hover {
+  background-color: #1e2127;
 }
