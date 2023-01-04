@@ -9,10 +9,11 @@ class Pokedex extends Component {
       <>
         <h1> Pokédex </h1>
         <ul>
-          {
+          {/* {
             pokemonList
               .map((pokemon) => <Pokemon key={ pokemon.id } pokemon={ pokemon } />)
-          }
+          } */}
+          {<Pokemon pokemon={ pokemonList[0] } />}
         </ul>
       </>
     );
