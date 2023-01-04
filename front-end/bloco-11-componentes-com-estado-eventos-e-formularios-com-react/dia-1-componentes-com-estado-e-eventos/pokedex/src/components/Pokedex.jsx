@@ -8,7 +8,7 @@ class Pokedex extends Component {
 
     this.state = {
       index: 0,
-      type: '',
+      type: 'all',
     }
 
     this.nextpoke = this.nextPoke.bind(this);
@@ -32,7 +32,7 @@ class Pokedex extends Component {
 
     const filter = (
       pokemonList.filter((pokemon) => {
-        if (type === '') return true;
+        if (type === 'all') return true;
         return pokemon.type === type;
       })
     )
@@ -48,9 +48,10 @@ class Pokedex extends Component {
         <ul>
           {<Pokemon pokemon={this.fetchFiltered()[index]} />}
         </ul>
-        <button onClick={() => this.nextPoke(this.fetchFiltered())}>Próximo Pokemon</button>
+        <button onClick={() => this.filterPoke('all')}>Todos</button>
         <button onClick={() => this.filterPoke('Electric')}>Tipo Eletrico</button>
         <button onClick={() => this.filterPoke('Fire')}>Tipo Fogo</button>
+        <button onClick={() => this.nextPoke(this.fetchFiltered())}>Próximo Pokemon</button>
       </>
     );
   }
