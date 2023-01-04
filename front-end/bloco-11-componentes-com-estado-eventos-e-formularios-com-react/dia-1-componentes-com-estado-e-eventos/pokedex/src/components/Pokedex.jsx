@@ -1,7 +1,8 @@
 import { Component } from "react";
-import Pokemon from "./Pokemon";
 import PropTypes from 'prop-types';
+import Pokemon from "./Pokemon";
 import Button from "./Button";
+import '../styles/Pokedex.css';
 
 class Pokedex extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Pokedex extends Component {
     this.nextpoke = this.nextPoke.bind(this);
     this.filterPoke = this.filterPoke.bind(this);;
     this.fetchFiltered = this.fetchFiltered.bind(this);
+    this.pokemonTypes = this.pokemonTypes.bind(this);
   }
 
   nextPoke(list) {
@@ -55,36 +57,40 @@ class Pokedex extends Component {
   render() {
     const { index } = this.state;
     return (
-      <>
+      <div className='pokedex'>
         <h1> Pokédex </h1>
-        <ul>
+        <ul className="pokedex">
           {<Pokemon pokemon={this.fetchFiltered()[index]} />}
         </ul>
-        <Button
-          onClick={() => this.filterPoke('all')}
-          className='filter-btn'  
-        >
-          All
-        </Button>
-        {
-          this.pokemonTypes().map((type) => (
-            <Button
-              key={type}
-              onClick={() => this.filterPoke(type)}
-              className='filter-btn'
-            >
-              {type}
-            </Button>
-          ))
-        }
-        <Button
-          onClick={() => this.nextPoke(this.fetchFiltered())}
-          className='filter-btn'
-          disabled={this.fetchFiltered().length <= 1}
-        >
-          Next Pokémon
-        </Button>
-      </>
+        <div className="pokedex-buttons-panel">
+          <Button
+            type='button'
+            onClick={() => this.filterPoke('all')}
+            className='filter-btn'  
+          >
+            All
+          </Button>
+          {
+            this.pokemonTypes().map((type) => (
+              <Button
+                key={type}
+                onClick={() => this.filterPoke(type)}
+                className='filter-btn'
+              >
+                {type}
+              </Button>
+            ))
+          }
+          <Button
+            type='button'
+            onClick={() => this.nextPoke(this.fetchFiltered())}
+            className='pokedex-btn'
+            disabled={this.fetchFiltered().length <= 1}
+          >
+            Next Pokémon
+          </Button>
+        </div>
+      </div>
     );
   }
 }
@@ -94,17 +100,7 @@ Pokedex.defaultProps = {
 }
 
 Pokedex.propTypes = {
-  pokemonList: PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    type: PropTypes.string,
-    averageWeight: PropTypes.shape({
-      value: PropTypes.string,
-      measurementUnit: PropTypes.string,
-    }),
-    image: PropTypes.string,
-    moreInfo: PropTypes.string,
-  }).isRequired,
+  pokemonList: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Pokedex;

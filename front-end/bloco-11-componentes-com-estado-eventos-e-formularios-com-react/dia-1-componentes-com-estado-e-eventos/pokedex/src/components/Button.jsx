@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import '../styles/button.css';
 
 class Button extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class Button extends React.Component {
     return (
       <button
         onClick={onClick}
-        className={className}
+        className={`button-text ${className}`}
         disabled={disable}
         type='button'
       >
