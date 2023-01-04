@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Pokemon from "./Pokemon";
 import PropTypes from 'prop-types';
+import Button from "./Button";
 
 class Pokedex extends Component {
   constructor(props) {
@@ -40,6 +41,17 @@ class Pokedex extends Component {
     return filter;
   }
 
+  pokemonTypes() {
+    const {pokemonList} = this.props;
+    const types = [];
+
+    pokemonList.forEach(({type}) => {
+      if (!types.includes(type)) types.push(type)
+    })
+
+    return types;
+  }
+
   render() {
     const { index } = this.state;
     return (
@@ -48,10 +60,30 @@ class Pokedex extends Component {
         <ul>
           {<Pokemon pokemon={this.fetchFiltered()[index]} />}
         </ul>
-        <button onClick={() => this.filterPoke('all')}>Todos</button>
-        <button onClick={() => this.filterPoke('Electric')}>Tipo Eletrico</button>
-        <button onClick={() => this.filterPoke('Fire')}>Tipo Fogo</button>
-        <button onClick={() => this.nextPoke(this.fetchFiltered())}>Próximo Pokemon</button>
+        <Button
+          onClick={() => this.filterPoke('all')}
+          className='filter-btn'  
+        >
+          All
+        </Button>
+        {
+          this.pokemonTypes().map((type) => (
+            <Button
+              key={type}
+              onClick={() => this.filterPoke(type)}
+              className='filter-btn'
+            >
+              {type}
+            </Button>
+          ))
+        }
+        <Button
+          onClick={() => this.nextPoke(this.fetchFiltered())}
+          className='filter-btn'
+          disabled={this.fetchFiltered().length <= 1}
+        >
+          Next Pokémon
+        </Button>
       </>
     );
   }
