@@ -8,27 +8,49 @@ class Pokedex extends Component {
 
     this.state = {
       index: 0,
+      type: '',
     }
 
-    this.nextpoke = this.nextpoke.bind(this);;
+    this.nextpoke = this.nextPoke.bind(this);
+    this.filterPoke = this.filterPoke.bind(this);;
+    this.fetchFiltered = this.fetchFiltered.bind(this);
   }
 
-  nextpoke(list) {
+  nextPoke(list) {
     this.setState(({index}) => ({
       index: (index + 1) % list.length
     }))
   }
 
-  render() {
+  filterPoke(type) {
+    this.setState({index: 0, type})
+  }
+
+  fetchFiltered() {
     const { pokemonList } = this.props;
+    const { type } = this.state;
+
+    const filter = (
+      pokemonList.filter((pokemon) => {
+        if (type === '') return true;
+        return pokemon.type === type;
+      })
+    )
+
+    return filter;
+  }
+
+  render() {
     const { index } = this.state;
     return (
       <>
         <h1> Pokédex </h1>
         <ul>
-          {<Pokemon pokemon={ pokemonList[index] } />}
+          {<Pokemon pokemon={this.fetchFiltered()[index]} />}
         </ul>
-        <button onClick={() => this.nextpoke(pokemonList)}>Próximo Pokemon</button>
+        <button onClick={() => this.nextPoke(this.fetchFiltered())}>Próximo Pokemon</button>
+        <button onClick={() => this.filterPoke('Electric')}>Tipo Eletrico</button>
+        <button onClick={() => this.filterPoke('Fire')}>Tipo Fogo</button>
       </>
     );
   }
