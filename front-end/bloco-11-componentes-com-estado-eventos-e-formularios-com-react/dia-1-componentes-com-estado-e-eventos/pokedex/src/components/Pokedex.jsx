@@ -14,10 +14,8 @@ class Pokedex extends Component {
   }
 
   nextpoke(list) {
-    const {index} = this.state;
-    if (index === list.length -1) return;
     this.setState(({index}) => ({
-      index: index + 1
+      index: (index + 1) % list.length
     }))
   }
 
