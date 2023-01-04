@@ -3,18 +3,34 @@ import Pokemon from "./Pokemon";
 import PropTypes from 'prop-types';
 
 class Pokedex extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      index: 0,
+    }
+
+    this.nextpoke = this.nextpoke.bind(this);;
+  }
+
+  nextpoke(list) {
+    const {index} = this.state;
+    if (index === list.length -1) return;
+    this.setState(({index}) => ({
+      index: index + 1
+    }))
+  }
+
   render() {
     const { pokemonList } = this.props;
+    const { index } = this.state;
     return (
       <>
         <h1> Pokédex </h1>
         <ul>
-          {/* {
-            pokemonList
-              .map((pokemon) => <Pokemon key={ pokemon.id } pokemon={ pokemon } />)
-          } */}
-          {<Pokemon pokemon={ pokemonList[0] } />}
+          {<Pokemon pokemon={ pokemonList[index] } />}
         </ul>
+        <button onClick={() => this.nextpoke(pokemonList)}>Próximo Pokemon</button>
       </>
     );
   }
