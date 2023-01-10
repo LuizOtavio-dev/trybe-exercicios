@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddressForm from './components/AddressForm';
+import DataDisplay from './components/DataDisplay';
 import PersonalForm from './components/PersonalForm';
 import ProfessionalForm from './components/ProfessionalForm';
 import handleValue from './utils/handleValue';
@@ -17,6 +18,7 @@ class App extends Component {
     resume: '',
     role: '',
     roleDescription: '',
+    displayData: false,
   }
 
   handleChange = ({ target: { name, value } }) => {
@@ -36,14 +38,23 @@ class App extends Component {
     }
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      displayData: true,
+    })
+  };
+
   render() {
+    const { displayData } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
           <h1>Formulário</h1>
         </header>
         <main>
-          <form>
+          <form onSubmit={ this.handleSubmit }>
             <PersonalForm
               handleChange={ this.handleChange }
               { ...this.state }
@@ -57,6 +68,8 @@ class App extends Component {
               handleChange={ this.handleChange }
               { ...this.state }
             />
+            <button type='submit'>Enviar</button>
+            { displayData && <DataDisplay { ...this.state } /> }
           </form>
         </main>
       </div>
