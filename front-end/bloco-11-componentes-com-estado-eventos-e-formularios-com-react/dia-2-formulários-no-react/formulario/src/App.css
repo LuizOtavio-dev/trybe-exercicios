@@ -6,3 +6,54 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+form {
+  align-items: center;
+  background-color: #424448;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 400px;
+}
+
+fieldset {
+  align-items: center;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  width: 400px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+}
+
+input {
+  margin-left: 20px;
+  width: 180px;
+}
+
+select {
+  margin-left: 10px;
+}
+
+textarea {
+  height: 100px;
+  width: 182px;
+}
+
+button {
+  background-color: rgb(96, 239, 96);
+  border: none;
+  color: white;
+  font-weight: 900;
+  height: 30px;
+  margin: 10px;
+  width: 80px;
+}
