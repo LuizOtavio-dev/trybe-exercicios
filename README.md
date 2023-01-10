@@ -93,7 +93,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 12-1: _Components com estado_
 - [X] 12-2: _Eventos e formulários no React_
-- [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
+- [ ] 12-3: _[Projeto - Movie Cards Library Stateful](https://github.com/tryber/sd-010-a-project-movie-cards-library-stateful/pull/134)_
 
 ##### Bloco 13: React
 
