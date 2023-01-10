@@ -6,20 +6,22 @@ import PersonalForm from './components/PersonalForm';
 import ProfessionalForm from './components/ProfessionalForm';
 import handleValue from './utils/handleValue';
 
+const INITIAL_STATE = {
+  name: '',
+  email: '',
+  cpf: '',
+  address: '',
+  city: '',
+  countryState: '',
+  addressType: 'Casa',
+  resume: '',
+  role: '',
+  roleDescription: '',
+  displayData: false,
+}
+
 class App extends Component {
-  state = {
-    name: '',
-    email: '',
-    cpf: '',
-    address: '',
-    city: '',
-    countryState: '',
-    addressType: '',
-    resume: '',
-    role: '',
-    roleDescription: '',
-    displayData: false,
-  }
+  state = INITIAL_STATE;
 
   handleChange = ({ target: { name, value } }) => {
     let valueUpperCase = handleValue(name, value);
@@ -43,6 +45,10 @@ class App extends Component {
     this.setState({
       displayData: true,
     })
+  };
+
+  handleClear = () => {
+    this.setState(INITIAL_STATE);
   };
 
   render() {
@@ -69,6 +75,7 @@ class App extends Component {
               { ...this.state }
             />
             <button type='submit'>Enviar</button>
+            <button type='reset' onClick={ this.handleClear }>Limpar</button>
             { displayData && <DataDisplay { ...this.state } /> }
           </form>
         </main>
