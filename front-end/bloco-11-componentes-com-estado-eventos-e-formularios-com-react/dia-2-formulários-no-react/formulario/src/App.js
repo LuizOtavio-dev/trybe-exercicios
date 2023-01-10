@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AddressForm from './components/AddressForm';
 import PersonalForm from './components/PersonalForm';
+import ProfessionalForm from './components/ProfessionalForm';
 import handleValue from './utils/handleValue';
 
 class App extends Component {
@@ -13,6 +14,9 @@ class App extends Component {
     city: '',
     countryState: '',
     addressType: '',
+    resume: '',
+    role: '',
+    roleDescription: '',
   }
 
   handleChange = ({ target: { name, value } }) => {
@@ -47,6 +51,10 @@ class App extends Component {
             <AddressForm
               handleChange={ this.handleChange }
               handleBlur={ this.handleBlur }
+              { ...this.state }
+            />
+            <ProfessionalForm
+              handleChange={ this.handleChange }
               { ...this.state }
             />
           </form>
