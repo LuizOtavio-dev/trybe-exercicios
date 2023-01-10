@@ -18,6 +18,7 @@ const INITIAL_STATE = {
   role: '',
   roleDescription: '',
   displayData: false,
+  emailError: '',
 }
 
 class App extends Component {
@@ -26,11 +27,19 @@ class App extends Component {
   handleChange = ({ target: { name, value } }) => {
     let valueUpperCase = handleValue(name, value);
 
+    const errorMsg = this.validateEmail(name, value);
+
     this.setState((prevState) => ({
       ...prevState,
       [name]: valueUpperCase,
+      [`${name}Error`]: errorMsg,
     }))
   }
+
+  validateEmail = (name, value) => {
+    const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+    return regex.test(value) || name !== 'email' ? undefined : 'Email inválido'
+  };
 
   handleBlur = ({ target: { name, value }}) => {
     if (name === 'city' && /^\d/.test(value)) {

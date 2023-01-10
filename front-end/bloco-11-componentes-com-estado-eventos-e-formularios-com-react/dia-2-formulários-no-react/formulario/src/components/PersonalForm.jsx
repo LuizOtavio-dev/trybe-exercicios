@@ -7,6 +7,7 @@ class PersonalForm extends Component {
       name,
       email,
       cpf,
+      emailError,
       handleChange,
     } = this.props;
     
@@ -37,6 +38,7 @@ class PersonalForm extends Component {
             required
           />
         </label>
+        <span>{ emailError }</span>
         <label htmlFor="cpf">
           CPF
           <input
@@ -58,6 +60,7 @@ PersonalForm.propTypes = ({
   name: PropTypes.string,
   email: PropTypes.string,
   cpf: PropTypes.string,
+  emailError: PropTypes.string,
   handleChange: PropTypes.func,
 }).isRequired;
 
@@ -65,6 +68,7 @@ PersonalForm.defaultProps = {
   name: '',
   email: '',
   cpf: '',
+  emailError: '',
   handleChange: () => {},
 }
 
