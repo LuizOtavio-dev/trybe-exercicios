@@ -1,0 +1,5 @@
+# Bloco 12 - Ciclo de Vida de Componentes e React Router
+
+Esse bloco pertence ao módulo de `front-end` do curso da [Trybe](https://www.betrybe.com/). Nesse bloco aprendi sobre um conceito fundamental para construir suas aplicações em React, Lifecycle, ou ciclo de vida de um componente. Assim fui capaz de utilizar o componentDidMount para executar uma ação após o componente ser inserido no DOM, utilizar o shouldComponentUpdate para avaliar se uma atualização do componente deve ou não acontecer naquele momento, utilizar o componentDidUpdate para executar uma ação após o componente ser atualizado e utilizar o componentWillUnmount para realizar uma ação antes de o componente ser desmontado.
+
+Tendo isso em mente aqui você encontrará os exercícios que desenvolvi para fixar os conhecimentos que adquiri ao longo desse bloco.
