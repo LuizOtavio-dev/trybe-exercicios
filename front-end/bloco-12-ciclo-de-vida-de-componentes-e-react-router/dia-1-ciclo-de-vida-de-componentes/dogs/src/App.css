@@ -1,0 +1,31 @@
+body {
+  background-color: #282c34;
+  color: white;
+}
+
+img {
+  height: 300px;
+  margin: 50px;
+  width: 300px;
+}
+
+button {
+  background: linear-gradient(-45deg,#0b0c0c,  #125269, #125269, #0b0c0c);
+  border: solid white 1px;
+  box-shadow: #212424 2px 3px;
+  color: white;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
