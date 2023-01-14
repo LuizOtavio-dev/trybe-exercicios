@@ -30,7 +30,10 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.fetchDogs();
+    const localStorageSrc = localStorage.getItem('srcImage');
+    localStorageSrc
+    ? this.setState({ srcImage: localStorageSrc, loading: false }) 
+    : this.fetchDogs();
   };
 
   shouldComponentUpdate(_nextProps, nextState) {
@@ -39,19 +42,21 @@ class App extends Component {
 
   componentDidUpdate() {
     const { srcImage } = this.state;
-    localStorage.setItem('srcImage', srcImage);
-    const dogBreed = srcImage.split('/')[4];
-    alert(`Raça do doguinho: ${dogBreed}`)
+    if (srcImage) {
+      localStorage.setItem('srcImage', srcImage);
+      const dogBreed = srcImage.split('/')[4];
+       alert(`Raça do doguinho: ${dogBreed}`)
+    }
   }
 
   render() {
     const { srcImage, loading } = this.state;
-    const messageLoading = <div>Carregando...</div>;
+    const messageLoading = <div className='loading'><span>Carregando...</span></div>;
 
     if (loading) return messageLoading;
 
     return (
-      <div>
+      <div className='container'>
         <h1>Doguinho</h1>
         <img src={ srcImage } alt='dog random' />
         <button type='button' onClick={ this.fetchDogs }>Buscar dog</button>
