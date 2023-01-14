@@ -33,6 +33,17 @@ class App extends Component {
     this.fetchDogs();
   };
 
+  shouldComponentUpdate(_nextProps, nextState) {
+    return !nextState.srcImage.includes('terrier')
+  };
+
+  componentDidUpdate() {
+    const { srcImage } = this.state;
+    localStorage.setItem('srcImage', srcImage);
+    const dogBreed = srcImage.split('/')[4];
+    alert(`Raça do doguinho: ${dogBreed}`)
+  }
+
   render() {
     const { srcImage, loading } = this.state;
     const messageLoading = <div>Carregando...</div>;
