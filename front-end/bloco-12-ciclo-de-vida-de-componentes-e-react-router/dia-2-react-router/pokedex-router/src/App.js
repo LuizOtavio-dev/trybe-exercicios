@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import pokemons from './data';
 import Pokedex from './components/Pokedex';
 import About from './pages/About';
+import PokemonDetails from './pages/PokemonDetails';
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route exact path={'/'} render={ () => <Pokedex pokemons={ pokemons } /> } />
         <Route exact path={'/about'} component={ About } />
+        <Route exact path={'/pokemon/:id'} render={ (props) => <PokemonDetails { ...props } pokemons={ pokemons } /> } />
       </Switch>
     </div>
   );
