@@ -5,6 +5,7 @@ import Pokedex from './components/Pokedex';
 import About from './pages/About';
 import PokemonDetails from './pages/PokemonDetails';
 import Header from './components/Header';
+import NotFound from './pages/NotFound';
 
 import './App.css';
 
@@ -16,6 +17,8 @@ function App() {
         <Route exact path={'/'} render={ () => <Pokedex pokemons={ pokemons } /> } />
         <Route exact path={'/about'} component={ About } />
         <Route exact path={'/pokemon/:id'} render={ (props) => <PokemonDetails { ...props } pokemons={ pokemons } /> } />
+
+        <Route path={ '/*' } component={ NotFound } />
       </Switch>
     </div>
   );
