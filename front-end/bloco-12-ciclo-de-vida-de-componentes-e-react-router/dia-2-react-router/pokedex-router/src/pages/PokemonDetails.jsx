@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-// import Pokemon from "../components/Pokemon";
+import Pokemon from "../components/Pokemon";
 import { pokemonType } from "../types";
 
 class PokemonDetails extends Component {
@@ -8,9 +8,23 @@ class PokemonDetails extends Component {
     const { match: { params: id }, pokemons } = this.props;
     const pokemon = pokemons.find((pokemon) => pokemon.id === Number(id.id) )
     return (
-      <>
+      <section className="pokemon-details">
         <h1>{ `${pokemon.name} Details` }</h1>
-      </>
+        <Pokemon pokemon={ pokemon } />
+        <h2>Sumário</h2>
+        <p>{ pokemon.summary }</p>
+        <h2>Hábitat:</h2>
+        <section className="pokemon-habitat">
+          {
+            pokemon.foundAt.map(({ location, map }) => (
+              <section key={ location }>
+                <span>{ location }</span>
+                <img src={ map } alt="mapa do pokemon" />
+              </section>
+            ))
+          }
+        </section>
+      </section>
     );
   }
 }
