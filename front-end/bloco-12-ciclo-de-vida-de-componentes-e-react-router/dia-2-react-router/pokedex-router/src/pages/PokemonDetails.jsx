@@ -10,7 +10,7 @@ class PokemonDetails extends Component {
     return (
       <section className="pokemon-details">
         <h1>{ `${pokemon.name} Details` }</h1>
-        <Pokemon pokemon={ pokemon } />
+        <Pokemon pokemon={ pokemon } hideLinkDetails />
         <h2>Sumário</h2>
         <p>{ pokemon.summary }</p>
         <h2>Hábitat:</h2>

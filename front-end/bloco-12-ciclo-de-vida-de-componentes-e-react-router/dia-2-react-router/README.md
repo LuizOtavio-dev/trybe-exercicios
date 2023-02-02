@@ -50,14 +50,18 @@ O desafio de hoje é incrementar uma aplicação de Pokédex utilizando React Ro
 
   - Exercício 8
 
+    - Fazer com que o link, o qual leva para a página de detalhes de um Pokémon, seja exibido apenas na página /, ou seja, ele não deve ser exibido na tela detalhes.
+
+  - Exercício 9
+
     - Permita que um pokémon consiga ser favoritado dentro de sua visualização de mais detalhes.
 
     - Uma vez favoritado, adicione algum indicativo visual, de forma que quem ver o pokémon saberá que ele foi favoritado. O indicativo de que o pokémon foi favoritado também precisa aparecer na página principal, que mostra a Pokédex.
 
-  - Exercício 9
+  - Exercício 10
 
     - Crie uma visualização que mostre somente os pokémons favoritados. Torne-a acessível para quem a usar, criando um link para ela no conjunto fixo de links que você fez anteriormente.
 
-  - Exercício 10
+  - Exercício 11
 
     - Salve os pokémons favoritados no local storage e recupere-os quando a aplicação for inicializada.
