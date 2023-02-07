@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import '../styles/header.css';
+
 class Header extends Component {
   render() {
     return (
-      <header>
+      <header className='header'>
         <nav>
-          <Link to={ '/' }>Home</Link>
-          <Link to={ '/about' }>About</Link>
+          <Link to={ '/' } className='link'>Home</Link>
+          <Link to={ '/about' } className='link'>About</Link>
         </nav>
       </header>
     );

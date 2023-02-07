@@ -1,7 +1,7 @@
 .button-text {
-  text-align: center;
-  font-size: 15px;
-  color: white;
   background-color: black;
-  font-weight: 599;
+  color: white;
+  font-size: 15px;
+  font-weight: 598;
+  text-align: center;
 }

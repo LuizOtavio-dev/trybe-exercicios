@@ -3,14 +3,26 @@ import PropTypes from 'prop-types';
 import Pokemon from "../components/Pokemon";
 import { pokemonType } from "../types";
 
+import '../styles/pokemonDetails.css';
+
 class PokemonDetails extends Component {
+  state = {
+    favorite: false,
+  };
+
+  handleChange = ({ target: { name, checked } }) => {
+    this.setState({
+      [name]: checked,
+    })
+  };
+
   render() {
     const { match: { params: id }, pokemons } = this.props;
     const pokemon = pokemons.find((pokemon) => pokemon.id === Number(id.id) )
     return (
       <section className="pokemon-details">
         <h1>{ `${pokemon.name} Details` }</h1>
-        <Pokemon pokemon={ pokemon } hideLinkDetails />
+        <Pokemon pokemon={ pokemon } hideLinkDetails { ...this.state } />
         <h2>Sumário</h2>
         <p>{ pokemon.summary }</p>
         <h2>Hábitat:</h2>
@@ -24,6 +36,10 @@ class PokemonDetails extends Component {
             ))
           }
         </section>
+        <label htmlFor="favorite">
+          Pokemon Favoritado?
+          <input className="favorite-input" type="checkbox" name="favorite" id="favorite" onChange={ this.handleChange }/>
+        </label>
       </section>
     );
   }

@@ -1,0 +1,16 @@
+header {
+  background-color: #282c34;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+}
+
+nav {
+  margin: 1em;
+}
+
+.link {
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+}

@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
+import '../styles/about.css';
 
 class About extends Component {
   render() {
@@ -23,7 +25,7 @@ class About extends Component {
             Pokédex", with a new order that put related Pokémon near each other
             also included.
           </p>
-          <img src={ url } alt="pokedex" />
+          <img src={ url } alt="pokedex" className='pokedex-image' />
         </section>
       </>
     )
