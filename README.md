@@ -93,7 +93,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 11-1: _Components com estado e eventos_
 - [X] 11-2: _formulários no React_
-- [ ] 11-3: _[Projeto - Movie Cards Library Stateful](https://github.com/tryber/sd-010-a-project-movie-cards-library-stateful/pull/134)_
+- [X] 11-3: _[Projeto - Movie Cards Library Stateful](https://github.com/tryber/sd-010-a-project-movie-cards-library-stateful/pull/134)_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
@@ -101,7 +101,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 12-2: _React Router_
 - [ ] 12-3: _[Projeto - Movie Cards Library CRUD]()_
 
-##### Bloco 14: Metodologias Ágeis
+##### Bloco 13: Metodologias Ágeis
 
 - [ ] 14-1: _Metodologias Ágeis_
 - [ ] 14-2: _[Projeto - Frontend Online Store]()_
