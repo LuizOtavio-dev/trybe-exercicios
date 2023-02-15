@@ -99,7 +99,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 12-1: _Ciclo de vida de componentes_
 - [X] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - Movie Cards Library CRUD]()_
+- [ ] 12-3: _[Projeto - Movie Cards Library CRUD](https://github.com/tryber/sd-010-a-project-movie-card-library-crud/pull/113)_
 
 ##### Bloco 13: Metodologias Ágeis
 
