@@ -146,7 +146,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 19-3: _Orquestrando Containers com Docker Compose_
 - [ ] 19-4: _[Projeto - Docker Todo-List]()_
 
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 20: Introdução à SQL
 
 - [ ] 20-1: _Banco de dados SQL_
 - [ ] 20-2: _Encontrando dados em um banco de dados_
@@ -154,19 +154,21 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 20-4: _Manipulando tabelas_
 - [ ] 20-5: _[Projeto - All For One]()_
 
-##### Bloco 21: Bancos de dados relacionais
+##### Bloco 21: Funções SQL, JOINs e Normalização
 
 - [ ] 21-1: _Funções mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [ ] 21-2: _Descomplicando JOINs_
+- [ ] 21-3: _Transformando ideias em um modelo de banco de dados_
+- [ ] 21-4: _[Projeto - One For All]()_
 
-##### Bloco 22: Bancos de dados relacionais
+##### Bloco 22: Introdução ao Desenvolvimento Web com Node.js
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [ ] 22-1: _Node.js: Runtime Assíncrono_
+- [ ] 22-2: _Node.js: API REST com Express_
+- [ ] 22-3: _Node.js: Testes de Integração_
+- [ ] 22-4: _Node.js: Express e Middlewares_
+- [ ] 22-5: _Node.js: Express e MySQL_
+- [ ] 22-6: _[Projeto - Talker Manager]()_
 
 ##### Bloco 23: Introdução - NoSQL
 
