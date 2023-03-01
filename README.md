@@ -170,11 +170,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 22-5: _Node.js: Express e MySQL_
 - [ ] 22-6: _[Projeto - Talker Manager]()_
 
-##### Bloco 23: Introdução - NoSQL
+##### Bloco 23: Arquitetura de Software: Model, Service e Controller
 
-- [ ] 23-1: _MongoDB - Introdução_
-- [ ] 23-2: _Filter Operators_
-- [ ] 23-3: _[Projeto - Data Flights]()_
+- [ ] 23-1: _Arquitetura de Software: Camada Model_
+- [ ] 23-2: _Arquitetura de Software: Camada Service_
+- [ ] 23-3: _Arquitetura de Software: Camada Controller_
+- [ ] 23-4: _[Projeto - Store Manager]()_
+- [ ] 23-4: _[Projeto - Data Flights]()_
 
 ##### Bloco 24: Updates
 
